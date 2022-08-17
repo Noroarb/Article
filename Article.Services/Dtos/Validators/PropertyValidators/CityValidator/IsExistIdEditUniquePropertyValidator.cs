@@ -1,0 +1,30 @@
+﻿using Card.Services.Interfaces;
+using FluentValidation.Validators;
+using Card.Services.Dtos;
+using Card.Services.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+//using NawafizApp.Common.Resources;
+
+namespace Card.Services.Dtos.Validators.PropertyValidators
+{
+    public class IsExistIdEditUniquePropertyValidator : PropertyValidator
+    {
+        public readonly ICityService _cityService;
+        public IsExistIdEditUniquePropertyValidator(ICityService CityService)
+            : base("هذه المحافظة غير موجودة")
+        {
+            _cityService = CityService;
+        }
+
+        protected override bool IsValid(PropertyValidatorContext context)
+        {
+           // string email = context.PropertyValue as string;
+            InputCityDto m = context.Instance as InputCityDto;
+            return _cityService.IsExistId(m.Id);
+        }
+    }
+}

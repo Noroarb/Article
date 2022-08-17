@@ -1,0 +1,1620 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Market.Services</name>
+    </assembly>
+    <members>
+        <member name="T:Delivery.Services.Dtos.EditCategoryDto">
+            <summary>
+            Category for admin
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.EditCategoryDto.Id">
+            <summary>
+            Id required for edit not for insert
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.EditCategoryDto.ParentID">
+            <summary>
+            The Id for the parent of this category 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.EditCategoryDto.Sort">
+            <summary>
+            Category sort 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.EditCategoryDto.ArabicName">
+            <summary>
+            Category name in arabic
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.EditCategoryDto.EnglishName">
+            <summary>
+            Category name in english
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.EditCategoryDto.ImagePath">
+            <summary>
+            Image category path , 
+            This is for show when edit
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.EditCategoryDto.CategoryChildren">
+            <summary>
+            This for Get not for input,  
+            list of this category's children
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.EditCategoryDto.HasChildren">
+            <summary>
+            This for Get not for input,  
+            Show that this category has children or not
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.CategoryDto">
+            <summary>
+            Category
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CategoryDto.Id">
+            <summary>
+            Category Id 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CategoryDto.ParentID">
+            <summary>
+            Parent category Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CategoryDto.Sort">
+            <summary>
+            Category sort 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CategoryDto.HasChildren">
+            <summary>
+            Show that this category has children or not
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CategoryDto.ProductsCount">
+            <summary>
+            Number of Products in this category
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CategoryDto.CategoryName">
+            <summary>
+            Category name
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CategoryDto.ImagePath">
+            <summary>
+            Image category path 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CategoryDto.Path">
+            <summary>
+            Category path
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CategoryDto.CategoryChildren">
+            <summary>
+            list of this category's children
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CategoryDto.IsActive">
+            <summary>
+            The State of this category
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.CategoryCityTownDto">
+            <summary>
+            Get the count of ads products by city or town
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CategoryCityTownDto.RestaurantId">
+            <summary>
+            required for get specefic Restaurant category
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CategoryCityTownDto.Id">
+            <summary>
+            Category/Guide Id, you can put it null if you want to get base category
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CategoryCityTownDto.CityId">
+            <summary>
+            City id you can set it null if you want to get classifies in all cities,
+            but you must set town id field null also
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CategoryCityTownDto.TownId">
+            <summary>
+            Town id you can set it null if you want to get classifies in all towns in specify city
+            
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.CityDto">
+            <summary>
+            City
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CityDto.Id">
+            <summary>
+            City Id 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CityDto.CityName">
+            <summary>
+            City name
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CityDto.TownsDto">
+            <summary>
+            List of towns that belong to this city
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.InputCategoryDto">
+            <summary>
+            Input category
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputCategoryDto.Id">
+            <summary>
+            Id required for edit not for insert
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputCategoryDto.RestaurantID">
+            <summary>
+            Restaurant Id 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputCategoryDto.ParentID">
+            <summary>
+            The Id for the parent of this category 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputCategoryDto.Sort">
+            <summary>
+            Category sort 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputCategoryDto.ArabicName">
+            <summary>
+            Category name in arabic
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputCategoryDto.EnglishName">
+            <summary>
+            Category name in english
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputCategoryDto.IsActive">
+            <summary>
+            Show that this category is active or not
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputCityDto.Id">
+            <summary>
+            Id required for edit not for insert
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputCityDto.Sort">
+            <summary>
+            This field is necessary for order
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputCityDto.ArabicCityName">
+            <summary>
+            City name in arabic
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputCityDto.EnglishCityName">
+            <summary>
+            City name in english
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.FavoriteRestaurantDto">
+            <summary>
+            this object for Favorite Restaurant
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.FavoriteRestaurantDto.ProductId">
+            <summary>
+            Product Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.FavoriteRestaurantDto.Date">
+            <summary>
+            not set it when add
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.InputMessageDto">
+            <summary>
+            For add new Message 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputMessageDto.MessageMobileId">
+            <summary>
+            Ayiosh Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputMessageDto.ReceiverId">
+            <summary>
+            Id of receiver
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputMessageDto.Body">
+            <summary>
+            message Contain
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputMessageDto.IsFile">
+            <summary>
+            Show that this message is file or not
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.MessageConnectionGroupsDto">
+            <summary>
+            MessageConnectionGroupsDto 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageConnectionGroupsDto.IMEI">
+            <summary>
+            Mobile IMEI number
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.MessagingDto">
+            <summary>
+            this object for Get message
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessagingDto.OrderId">
+            <summary>
+            Order Id, if this message for reply on order
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessagingDto.ReceiverName">
+            <summary>
+            Minimum length 3 char, 
+            Max length 75 char
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessagingDto.ReceiverPhoneNumber">
+            <summary>
+            Minimum length 4 Number, 
+            Max length 10 Number
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessagingDto.RestaurantName">
+            <summary>
+            Name of this restaurant
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.MessageDto">
+            <summary>
+            Message 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageDto.Id">
+            <summary>
+            Message id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageDto.MessageMobileId">
+            <summary>
+            Ayiosh Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageDto.SenderId">
+            <summary>
+            Id of sender
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageDto.SenderName">
+            <summary>
+            Sender name
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageDto.ReceiverId">
+            <summary>
+            Id of receiver
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageDto.ReceiverName">
+            <summary>
+            Receiver name
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageDto.Body">
+            <summary>
+            message Contain
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageDto.IsFile">
+            <summary>
+            Show that this message is file or not
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageDto.IsReceived">
+            <summary>
+            
+            Show that if message is received or not
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageDto.IsSeen">
+            <summary>
+            Show that if message is seen or not
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageDto.SendingDate">
+            <summary>
+            Sending Date
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageDto.ReceivedDate">
+            <summary>
+            Received Date
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageDto.ShowingDate">
+            <summary>
+            Showing Date
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageDto.Receiverstatus">
+            <summary>
+            Receiver status, if online return true
+            if we return you list of this class, you receive Receiver status just in first item
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageDto.DisconnectDate">
+            <summary>
+            Receiver disconnect Date; if receiver status is true(online), don't use this value 
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.MessageUserInfoDto">
+            <summary>
+            Message 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageUserInfoDto.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageUserInfoDto.IsOnline">
+            <summary>
+            User status, if online return true
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageUserInfoDto.ConnectionDate">
+            <summary>
+            Connection Date
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.MessageUserInfoDto.DisconnectionDate">
+            <summary>
+            Disconnection Date
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.AppVersionsDto.VersionNumber">
+            <summary>
+            App Version Number
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.AppVersionsDto.Link">
+            <summary>
+            App Version Link
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.AppVersionsDto.ApplicationType">
+            <summary>
+            if manager app is 1 , if user app is 2
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.AppVersionsDto.Date">
+            <summary>
+            Version date
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.OrderProductDto">
+            <summary>
+            this object In order to get the quantity and type of Products
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderProductDto.ProductId">
+            <summary>
+            Product Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderProductDto.Name">
+            <summary>
+            Product name
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderProductDto.Description">
+            <summary>
+            Product description
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderProductDto.MinAmount">
+            <summary>
+            minimum amount
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderProductDto.NewPrice">
+            <summary>
+            Unit price 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderProductDto.Image">
+            <summary>
+            main image of this product
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderProductDto.Amount">
+            <summary>
+            Amount of this product
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderProductDto.TotalPrice">
+            <summary>
+            total price 
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.OrderDto">
+            <summary>
+            this object for order
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderDto.UserId">
+            <summary>
+            User Id who is ordering
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderDto.Name">
+            <summary>
+            Person name who is ordering
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderDto.Phone">
+            <summary>
+            Phon number
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderDto.AddressDetailed">
+            <summary>
+            The Address Detailed of the person ordering
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderDto.Gps_Latitude">
+            <summary>
+            Gps Latitude location
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderDto.Gps_Longitude">
+            <summary>
+            Gps Longitude location
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderDto.facebook">
+            <summary>
+            facebook
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderDto.Date">
+            <summary>
+            Order date
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderDto.Notes">
+            <summary>
+            Notes
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderDto.Amount">
+            <summary>
+            Total Amount of this order
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderDto.TotalPrice">
+            <summary>
+            total price 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderDto.RestaurantImage">
+            <summary>
+            Restaurant Image
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderDto.RestaurantName">
+            <summary>
+            Restaurant Name
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderDto.Products_And_Amounts">
+            <summary>
+            This In order to get the quantity and type of Products
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OrderDto.Messages">
+            <summary>
+            Messages of this order
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.InputOrderProductDto">
+            <summary>
+            this object In order to determine the quantity and type of Products
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputOrderProductDto.ProductId">
+            <summary>
+            Product Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputOrderProductDto.Amount">
+            <summary>
+            Ammount of this product
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.InputOrderDto">
+            <summary>
+            this object for input order
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputOrderDto.Name">
+            <summary>
+            Person name who is ordering
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputOrderDto.Phone">
+            <summary>
+            Phon number
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputOrderDto.AddressDetailed">
+            <summary>
+            The Address Detailed of the person ordering
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputOrderDto.Gps_Latitude">
+            <summary>
+            Gps Latitude location
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputOrderDto.Gps_Longitude">
+            <summary>
+            Gps Longitude location
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputOrderDto.facebook">
+            <summary>
+            facebook
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputOrderDto.versionNumber">
+            <summary>
+            version number for block order from offline restaurant
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputOrderDto.Notes">
+            <summary>
+            Notes
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputOrderDto.Products_And_Amounts">
+            <summary>
+            This In order to determine the quantity and type of Products
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputTownDto.Id">
+            <summary>
+            Id required for edit not for insert
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputTownDto.CityId">
+            <summary>
+            required , City's Id where this town is located  
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputTownDto.ArabicTownName">
+            <summary>
+            required , Town name in arabic  
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputTownDto.EnglishTownName">
+            <summary>
+            required , Town name in english  
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.GetMessagesDto">
+            <summary>
+            Object to demand the messages
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.GetMessagesDto.anotherUserId">
+            <summary>
+            The user Id of the another person
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.GetMessagesDto.pageSize">
+            <summary>
+            Page size
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.GetMessagesDto.page">
+            <summary>
+            Page number
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.LanguageDto.Id">
+            <summary>
+            Id required for edit not for insert
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.LanguageDto.Code">
+            <summary>
+            Code should be 2 length only
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.LanguageDto.ArabicName">
+            <summary>
+            required , Maximum 100 characters length 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.LanguageDto.EnglishName">
+            <summary>
+            required , Maximum 100 characters length 
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.InputProductDto">
+            <summary>
+            add product or edit
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputProductDto.Id">
+            <summary>
+            Id required for edit not for insert
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputProductDto.CategoryId">
+            <summary>
+            Category Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputProductDto.MinAmount">
+            <summary>
+            minimum amount
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputProductDto.Name">
+            <summary>
+            Product name
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputProductDto.Description">
+            <summary>
+            Product description
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputProductDto.productOffer">
+            <summary>
+            product offer
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputProductDto.State">
+            <summary>
+            State of location...
+            Stop = 0, Active = 1, Deleted = 2, StopByAdminAfterStop = 3, StopByAdminAfterActive = 4
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputProductDto.OldPrice">
+            <summary>
+            Price this product before discount
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputProductDto.DiscountPercentage">
+            <summary>
+            Discount percentage
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.NotificationdictionaryDto">
+            <summary>
+            Notification send to device as dictionary  
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.NotificationdictionaryDto.Id">
+            <summary>
+            Id of this notification
+            required for update, not for add
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.NotificationdictionaryDto.Type">
+            <summary>
+            determine type of notification Update = 0,Product = 1, Message = 2, AdminAdvertisement = 3 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.NotificationdictionaryDto.ProductId">
+            <summary>
+            id of this Product
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.NotificationdictionaryDto.Image">
+            <summary>
+            image path 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.NotificationdictionaryDto.Title">
+            <summary>
+            Title of this Product, Or notify Title if type is AdminAdvertisement
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.NotificationdictionaryDto.Discription">
+            <summary>
+            Description of this Product, Or notify Discription if type is AdminAdvertisement
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.NotificationdictionaryDto.SenderId">
+            <summary>
+            Id of sender
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.NotificationdictionaryDto.SenderName">
+            <summary>
+            Sender name
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.NotificationdictionaryDto.Body">
+            <summary>
+            message Contain
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.NotificationdictionaryDto.Update">
+            <summary>
+            If type equal to zero, this field contains URL of new version
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.NotificationdictionaryDto.NotifyDate">
+            <summary>
+            Notify Date
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.NotificationdictionaryDto.RestaurantId">
+            <summary>
+            Restaurant Id
+            required for know firebase key
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.InputPaidAdsDto">
+            <summary>
+            Input Paid AdsDto
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputPaidAdsDto.Id">
+            <summary>
+            required for update, not for add
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputPaidAdsDto.Link">
+            <summary>
+            Facebook or web site link
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputPaidAdsDto.ImageName">
+            <summary>
+            Ad Name, you can take it null
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputPaidAdsDto.extension">
+            <summary>
+            ImageName extension, jpg, png or gif without dot
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.OutputMessageDto">
+            <summary>
+            For send this Message 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OutputMessageDto.Id">
+            <summary>
+            Message id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OutputMessageDto.MessageMobileId">
+            <summary>
+            Ayiosh Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OutputMessageDto.ReceiverId">
+            <summary>
+            Id of receiver
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OutputMessageDto.SenderId">
+            <summary>
+            Id of sender
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OutputMessageDto.SenderName">
+            <summary>
+            NAme of sender
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OutputMessageDto.SendingDate">
+            <summary>
+            Date and time of sending this message
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OutputMessageDto.Body">
+            <summary>
+            message Contain
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.OutputMessageDto.IsFile">
+            <summary>
+            Show that this message is file or not
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.PaidAdsDto">
+            <summary>
+            Paid Ads
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.PaidAdsDto.Id">
+            <summary>
+            Ads Id, required for update, not for add
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.PaidAdsDto.Link">
+            <summary>
+            Facebook or web site link
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.PaidAdsDto.ImagePath">
+            <summary>
+            Ad image
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.PaidAdsDto.Date">
+            <summary>
+            Date added ad
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CoverageRestaurantAreaDto.RestaurantId">
+            <summary>
+            Restaurant Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.CoverageRestaurantAreaDto.CoverageArea">
+            <summary>
+            The areas served by this restaurant
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.ProductSimplifyDto">
+            <summary>
+            this for user
+            This object for get product as simplify
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyDto.Id">
+            <summary>
+            Product Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyDto.CategoryId">
+            <summary>
+            Category Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyDto.RestaurantId">
+            <summary>
+            Restaurant Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyDto.Name">
+            <summary>
+            Product name
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyDto.Description">
+            <summary>
+            Product description
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyDto.MinAmount">
+            <summary>
+            minimum amount
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyDto.productOffer">
+            <summary>
+            product offer
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyDto.OldPrice">
+            <summary>
+            Price this product before discount
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyDto.DiscountPercentage">
+            <summary>
+            Discount percentage
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyDto.NewPrice">
+            <summary>
+            Unit price
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyDto.Image">
+            <summary>
+            main image of this product
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyDto.Date">
+            <summary>
+            The date and time when this product was added
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyDto.IsFavorite">
+            <summary>
+            Show if this product is favorite or not
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyDto.IsHasDelivery">
+            <summary>
+            Show that if this restaurant has delivery or not
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.ProductSimplifyFavoriteDto">
+            <summary>
+            this for user
+            This object for get product as simplify for Favorite
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyFavoriteDto.Id">
+            <summary>
+            Product Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyFavoriteDto.CategoryId">
+            <summary>
+            Category Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyFavoriteDto.RestaurantId">
+            <summary>
+            Restaurant Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyFavoriteDto.RestaurantName">
+            <summary>
+            Restaurant name
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyFavoriteDto.Name">
+            <summary>
+            Product name
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyFavoriteDto.Description">
+            <summary>
+            Product description
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyFavoriteDto.MinAmount">
+            <summary>
+            minimum amount
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyFavoriteDto.productOffer">
+            <summary>
+            product offer
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyFavoriteDto.OldPrice">
+            <summary>
+            Price this product before discount
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyFavoriteDto.DiscountPercentage">
+            <summary>
+            Discount percentage
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyFavoriteDto.NewPrice">
+            <summary>
+            Unit price
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyFavoriteDto.Image">
+            <summary>
+            main image of this product
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyFavoriteDto.Date">
+            <summary>
+            The date and time when this product was added
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyFavoriteDto.IsFavorite">
+            <summary>
+            Show if this product is favorite or not
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductSimplifyFavoriteDto.IsHasDelivery">
+            <summary>
+            Show that if this restaurant has delivery or not
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.InputRestaurantDto">
+            <summary>
+            this object for input Restaurant
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputRestaurantDto.Id">
+            <summary>
+            Id Restaurant, required for edit
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputRestaurantDto.UserId">
+            <summary>
+            User Id who is manage this Restaurant, 
+            he is admin this town.... 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputRestaurantDto.TownId">
+            <summary>
+            Town Id, required for all
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputRestaurantDto.State">
+            <summary>
+            State of Restaurant...
+            stop=> 0, active=> 1, pause=> 2
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputRestaurantDto.Sort">
+            <summary>
+            Order this Restaurant 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputRestaurantDto.RestaurantName">
+            <summary>
+            Restaurant name
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputRestaurantDto.RestaurantOffer">
+            <summary>
+            Restaurant offer 400 Char
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputRestaurantDto.LocationText">
+            <summary>
+            The place detailed where this Restaurant exist
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputRestaurantDto.Description">
+            <summary>
+            Description of this Restaurant
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputRestaurantDto.IsOnline">
+            <summary>
+            Show that if this restaurant online or not
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputRestaurantDto.IsHasDelivery">
+            <summary>
+            Show that if this restaurant has delivery or not
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputRestaurantDto.DeliveryCost">
+            <summary>
+            Cost of delivery
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputRestaurantDto.GreaterThanPriceDeliveryIsFree">
+            <summary>
+            If the cost of orders is greater than this price, delivery will be free
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.ProductDetailedDto">
+            <summary>
+            this for user
+            This object for get product detailed
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductDetailedDto.Id">
+            <summary>
+            Product Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductDetailedDto.CategoryId">
+            <summary>
+            Category Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductDetailedDto.RestaurantId">
+            <summary>
+            Restaurant Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductDetailedDto.Date">
+            <summary>
+            date and time add this product
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductDetailedDto.Name">
+            <summary>
+            Product name
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductDetailedDto.Description">
+            <summary>
+            Product description
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductDetailedDto.MinAmount">
+            <summary>
+            minimum amount
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductDetailedDto.IsFavorite">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductDetailedDto.productOffer">
+            <summary>
+            product offer
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductDetailedDto.ViewsCount">
+            <summary>
+            Views Count of this product
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductDetailedDto.OldPrice">
+            <summary>
+            Price this product before discount
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductDetailedDto.DiscountPercentage">
+            <summary>
+            Discount percentage
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductDetailedDto.NewPrice">
+            <summary>
+            Price this product after discount
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductDetailedDto.Images">
+            <summary>
+            Images of this product
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.ProductDetailedDto.SimilarProducts">
+            <summary>
+            Similar Products
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.RestaurantInfoDto">
+            <summary>
+            this object for get Restaurant Info for user
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantInfoDto.Id">
+            <summary>
+            Id Restaurant
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantInfoDto.UserId">
+            <summary>
+            Restaurant manager Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantInfoDto.Sort">
+            <summary>
+            Order this Restaurant 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantInfoDto.RestaurantName">
+            <summary>
+            Restaurant name
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantInfoDto.ImagePath">
+            <summary>
+            Image path
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantInfoDto.ProductsCount">
+            <summary>
+            Number of products in this Restaurant
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantInfoDto.LocationText">
+            <summary>
+            The place detailed where this Restaurant exist
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantInfoDto.Description">
+            <summary>
+            Description of this Restaurant
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantInfoDto.State">
+            <summary>
+            State of Restaurant...
+            stop=> 0, active=> 1, pause=> 2
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantInfoDto.IsOnline">
+            <summary>
+            Show that if this restaurant online or not
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantInfoDto.IsHasDelivery">
+            <summary>
+            Show that if this restaurant has delivery or not
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantInfoDto.DeliveryCost">
+            <summary>
+            Cost of delivery
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantInfoDto.GreaterThanPriceDeliveryIsFree">
+            <summary>
+            If the cost of orders is greater than this price, delivery will be free
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantInfoDto.CoverageRestaurantAreas">
+            <summary>
+            The areas served by this restaurant
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.SearchProductsDto">
+            <summary>
+            This use as parameter
+            to get products in Restaurant
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.SearchProductsDto.Id">
+            <summary>
+            Get product by product id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.SearchProductsDto.RestaurantId">
+            <summary>
+            Restaurant Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.SearchProductsDto.MinPrice">
+            <summary>
+            minimum price
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.SearchProductsDto.MaxPrice">
+            <summary>
+            Maximum price
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.SearchProductsDto.CategoryId">
+            <summary>
+            Category Id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.SearchProductsDto.TownId">
+            <summary>
+            Get products by Town id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.SearchProductsDto.Text">
+            <summary>
+            Get products by name and description
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.SearchProductsDto.sorting">
+            <summary>
+            sorting
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.SearchProductsDto.pageSize">
+            <summary>
+            Page size
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.SearchProductsDto.page">
+            <summary>
+            Page number
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.InputMessagingDto">
+            <summary>
+            this object for input message
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputMessagingDto.Id">
+            <summary>
+            ID required for edit not for insert
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputMessagingDto.SenderName">
+            <summary>
+            If sender not registered, this field is required, 
+            Minimum length 3 char, 
+            Max length 75 char
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputMessagingDto.Location">
+            <summary>
+            Location of user
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.InputMessagingDto.SenderPhoneNumber">
+            <summary>
+            If sender not registered, this field is required
+            Minimum length 4 Number, 
+            Max length 10 Number
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.SearchRestaurantsDto">
+            <summary>
+            This use as parameter
+            to get Restaurants
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.SearchRestaurantsDto.ID">
+            <summary>
+            Get Restaurants by Restaurant id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.SearchRestaurantsDto.CityID">
+            <summary>
+            Get Restaurants by city id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.SearchRestaurantsDto.TownID">
+            <summary>
+            Get Restaurants by town id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.SearchRestaurantsDto.UserId">
+            <summary>
+            Get Restaurants by user id
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.SearchRestaurantsDto.pageSize">
+            <summary>
+            Page size
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.SearchRestaurantsDto.page">
+            <summary>
+            Page number
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.RestaurantDto">
+            <summary>
+            this object for get Restaurant for user
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantDto.Id">
+            <summary>
+            Id Restaurant
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantDto.Sort">
+            <summary>
+            Order this Restaurant 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantDto.RestaurantOffer">
+            <summary>
+            Restaurant offer 400 Char
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantDto.RestaurantName">
+            <summary>
+            Restaurant name
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantDto.ImagePath">
+            <summary>
+            Image path
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantDto.LocationText">
+            <summary>
+            The place detailed where this Restaurant exist
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantDto.Description">
+            <summary>
+            Description of this Restaurant
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantDto.State">
+            <summary>
+            State of Restaurant...
+            stop=> 0, active=> 1, pause=> 2
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantDto.IsOnline">
+            <summary>
+            Show that if this restaurant online or not
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantDto.IsHasDelivery">
+            <summary>
+            Show that if this restaurant has delivery or not
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantDto.DeliveryCost">
+            <summary>
+            Cost of delivery
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.RestaurantDto.GreaterThanPriceDeliveryIsFree">
+            <summary>
+            If the cost of orders is greater than this price, delivery will be free
+            </summary>
+        </member>
+        <member name="T:Delivery.Services.Dtos.TownDto">
+            <summary>
+            Town 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.TownDto.Id">
+            <summary>
+            Town Id 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.TownDto.CityId">
+            <summary>
+            City Id 
+            </summary>
+        </member>
+        <member name="P:Delivery.Services.Dtos.TownDto.TownName">
+            <summary>
+            Town name 
+            </summary>
+        </member>
+        <member name="M:Delivery.Services.Interfaces.IAppVersionsService.Add(Delivery.Services.Dtos.AppVersionsDto)">
+            <summary>
+            For Admin
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Delivery.Services.Interfaces.IAppVersionsService.Delete(System.Int32)">
+            <summary>
+            For admin
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Delivery.Services.Interfaces.IAppVersionsService.GetAllVersions">
+            <summary>
+            Get All Versions, 
+            For admin
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Delivery.Services.Interfaces.IAppVersionsService.GetVersionById(System.Int32)">
+            <summary>
+            Get Version by id, 
+            For admin
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Delivery.Services.Interfaces.IAppVersionsService.GetLastVersion(System.Int32)">
+            <summary>
+            Get last Version, 
+            For user
+            </summary>
+            <param name="ApplicationType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Delivery.Services.Interfaces.IPaidAdsService.AddNewPaidAds(Delivery.Services.Dtos.InputPaidAdsDto)">
+            <summary>
+            This function for admin
+            Add New Paid ads
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Delivery.Services.Interfaces.IPaidAdsService.DeletePaidAds(System.String)">
+            <summary>
+            This function for admin
+            Delete paid ads
+            </summary>
+            <param name="ImageUrl"></param>
+            <returns>true if deleted successfully</returns>
+        </member>
+        <member name="M:Delivery.Services.Interfaces.IPaidAdsService.UpdatePaidAds(Delivery.Services.Dtos.InputPaidAdsDto)">
+            <summary>
+            This function for admin
+            Add New Paid ads
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Delivery.Services.Interfaces.IPaidAdsService.GetAllPaidAds">
+            <summary>
+            Get all paid ads
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Delivery.Services.Services.AppVersionsService.Add(Delivery.Services.Dtos.AppVersionsDto)">
+            <summary>
+            For Admin
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Delivery.Services.Services.AppVersionsService.Delete(System.Int32)">
+            <summary>
+            For admin
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Delivery.Services.Services.AppVersionsService.GetAllVersions">
+            <summary>
+            Get All Versions, 
+            For admin
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Delivery.Services.Services.AppVersionsService.GetVersionById(System.Int32)">
+            <summary>
+            Get Version by id, 
+            For admin
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Delivery.Services.Services.AppVersionsService.GetLastVersion(System.Int32)">
+            <summary>
+            Get last Version, 
+            For user
+            </summary>
+            <param name="ApplicationType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Delivery.Services.PaidAdsService.AddNewPaidAds(Delivery.Services.Dtos.InputPaidAdsDto)">
+            <summary>
+            This function for admin
+            Add New Paid ads
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Delivery.Services.PaidAdsService.UpdatePaidAds(Delivery.Services.Dtos.InputPaidAdsDto)">
+            <summary>
+            This function for admin
+            Add New Paid ads
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Delivery.Services.PaidAdsService.DeletePaidAds(System.String)">
+            <summary>
+            This function for admin
+            Delete paid ads
+            </summary>
+            <param name="ImageUrl"></param>
+            <returns>true if deleted successfully</returns>
+        </member>
+        <member name="M:Delivery.Services.PaidAdsService.GetAllPaidAds">
+            <summary>
+            Get all paid ads
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

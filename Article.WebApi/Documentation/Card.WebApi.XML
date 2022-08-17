@@ -1,0 +1,1123 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Card.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Card.WebApi.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:Card.WebApi.Areas.HelpPage.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="T:Card.WebApi.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:Card.WebApi.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator"/></returns>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:Card.WebApi.Areas.HelpPage.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:Card.WebApi.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="T:Card.WebApi.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="T:Card.WebApi.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:Card.WebApi.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="T:Card.WebApi.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Card.WebApi.Areas.HelpPage.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:Card.WebApi.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets or sets the <see cref="T:Card.WebApi.Areas.HelpPage.ModelDescriptions.ParameterDescription"/> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:Card.WebApi.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:Card.WebApi.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null"/> object.
+            </summary>
+            <remarks>
+            Collection includes just <see cref="M:Card.WebApi.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)"/> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,Card.WebApi.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,Card.WebApi.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
+            one using <see cref="M:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:Card.WebApi.Areas.HelpPage.ObjectGenerator"/>) and other
+            factories in <see cref="P:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},Card.WebApi.Areas.HelpPage.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Card.WebApi.Areas.HelpPage.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates a new <see cref="T:Card.WebApi.Areas.HelpPage.HelpPageSampleKey"/> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:Card.WebApi.Areas.HelpPage.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageSampleKey.#ctor(Card.WebApi.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:Card.WebApi.Areas.HelpPage.HelpPageSampleKey"/> based on <see cref="P:Card.WebApi.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:Card.WebApi.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,Card.WebApi.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:Card.WebApi.Areas.HelpPage.HelpPageSampleKey"/> based on media type, <see cref="P:Card.WebApi.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:Card.WebApi.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:Card.WebApi.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:Card.WebApi.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="T:Card.WebApi.Areas.HelpPage.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Card.WebApi.Areas.HelpPage.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:Card.WebApi.Areas.HelpPage.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:Card.WebApi.Areas.HelpPage.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:Card.WebApi.Areas.HelpPage.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:Card.WebApi.Areas.HelpPage.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:Card.WebApi.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Card.WebApi.Areas.HelpPage.XmlDocumentationProvider"/> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="M:Card.WebApi.Athou_TextVerification.ReuseVerification.ReuseVerification_(System.Int32)">
+             <summary>
+            اعادة استخدام رقم
+             </summary>
+        </member>
+        <member name="M:Card.WebApi.Athou_TextVerification.VerificationDetails.Verification_Details(System.String)">
+            <summary>
+            لجلب الرسائل
+            </summary>
+            <param name="Id">Unique identifier for the verification</param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Athou_TextVerification.GetAllTargets.Get_AllTargets">
+            <summary>
+            جلب جميع الخدمات
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Athou_TextVerification.GetTargetById.Get_TargetById(System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Athou_TextVerification.CreateVerification.Create_Verification(System.Int32)">
+            <summary>
+            طلب رقم من الموقع
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Athou_TextVerification.GetToken_TextVerifi.GetAccessToken">
+            <summary>
+            Get access token from textverification.com website
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AccountController.Refresh_FirebaseToken(System.String)">
+            <summary>
+            this function for android app
+            call this func when firebase token refresh
+            </summary>
+            <param name="firebaseToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AccountController.Register_User(Card.Services.Dtos.RegisterUserDto)">
+            <summary>
+            Add Restaurant manager
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AccountController.BlockUserd(System.Guid)">
+            <summary>
+            هذا التابع للأدمن لحظر مستخدم
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AccountController.ChangeUserToVIP(System.Guid)">
+            <summary>
+            هذا التابع للأدمن لتغيير حالة مستخدم إلى VIP
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AccountController.ChangeUserToSimpleUser(System.Guid)">
+            <summary>
+            هذا التابع للأدمن لتغيير حالة مستخدم إلى مستخدم عادي
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AccountController.Encrypt(System.String,System.String)">
+            <summary>
+            this for Encrypt password befor login
+            </summary>
+            <param name="input"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AccountController.LoginUser(System.String,System.String)">
+            <summary>
+            Login User by username and password
+            </summary>
+            <param name="username">username</param>
+            <param name="password">password</param>
+            <param name="RestaurantId">password</param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminEmail_LogController.GetAllEmails">
+            <summary>
+            Get All Versions, 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Card.WebApi.Controllers.UserVerificationController">
+            <summary>
+             هذا القسم خاص بالمستخدم
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Controllers.UserVerificationController.GetPhoneNumber(System.Int32)">
+            <summary>
+            هذا التابع يستخدمه وسام
+            
+            لجلب رقم
+            العمليات المطلوبة:
+            يمرر المعرف الخاص بالخدمة المطلوبة
+            يجب ان يكون لدى المستخدم الرصيد الكافي لشراء رقم
+            سيعيد هذا التابع رقم الهاتف
+            بعدها يجب طلب تابع اخر اسمه
+            GetMessages
+            احتفظ بال 
+            public string id { get; set; } 
+            الذي يعيده هذا الطلب
+            الغاية من حفظ هذ البارامتر هو تمريره للتابع 
+            GetMessages
+            لجلب الرسائل كل 5 ثوان
+            </summary>
+            <param name="id">Id Target</param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.UserVerificationController.ReuseNumber(System.Int32)">
+            <summary>
+            هذا التابع يستخدمه وسام
+            
+            لإعادة استخدام رقم
+            ملاحظة: قد لايكون هذا الرقم متوفر فسوف يعيد هذا التابع رسالة خطأ توضح المشكلة
+            العمليات المطلوبة:
+            يمرر المعرف الخاص بالخدمة المطلوبة
+            يجب ان يكون لدى المستخدم الرصيد الكافي لشراء رقم
+            سيعيد هذا التابع رقم الهاتف
+            بعدها يجب طلب تابع اخر اسمه
+            GetMessages
+            احتفظ بال 
+            public string id { get; set; } 
+            الذي يعيده هذا الطلب
+            الغاية من حفظ هذ البارامتر هو تمريره للتابع 
+            GetMessages
+            لجلب الرسائل كل 5 ثوان
+            </summary>
+            <param name="id">Id Target</param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.UserVerificationController.GetAllTargets">
+            <summary>
+            هذا التابع يستخدمه وسام
+            لجلب جميع الخدمات المدعومة وسعر كل خدمة
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.UserVerificationController.GetMessages(System.String)">
+            <summary>
+            هذا التابع يستخدمه وسام
+            هذا التابع يتم طلبه كل 5 ثوان عندما ينتظر المستخدم وصول الرسالة
+            انتبه يجب اضافة عداد تنازلي يعبر عن مدة صلاحية الرقم
+            مدة صلاحية الرقم يعيدها هذا التابع أو التابع الذي طلبته سابقا واسمه
+            GetPhoneNumber
+            
+            </summary>
+            <param name="VerificationId">Get This parameter from GetPhoneNumber function</param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.UserVerificationController.GetAll_Verification_OrdersForUser">
+            <summary>
+            يستخدم وسام هذا التابع
+            للاستخدام الخاص بال 
+            history
+            من طرف المستخدم
+            هذا التابع لتتبع عدد المرات التي طلب فيها المستخدم رقم
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Card.WebApi.Controllers.AdminVerificationController">
+            <summary>
+            هذا القسم خاص بالأدمن
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminVerificationController.GetPhoneNumber(System.Int32,System.Guid)">
+            <summary>
+            هذا التابع لايستخدمه وسام
+            للتجربة فقط
+            لجلب رقم
+            </summary>
+            <param name="id">Id Target</param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminVerificationController.GetAllTargets">
+            <summary>
+            هذا التابع لايستخدمه وسام
+            للتجربة فقط
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminVerificationController.GetMessages(System.String)">
+            <summary>
+            هذا التابع لايستخدمه وسام
+            للتجربة فقط
+            </summary>
+            <param name="VerificationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminVerificationController.GetAll_Verification_OrdersForUser(System.Guid)">
+            <summary>
+            يستخدم وسام هذا التابع
+            هذا خاص بالأدمن فقط
+            هذا التابع لتتبع عدد المرات التي طلب فيها المستخدم رقم
+            </summary>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminVerificationController.DeletePhoneNumber(System.Int32)">
+            <summary>
+            لايستخدم وسام هذا التابع
+            استخدام هذا التابع يؤثر على الكمية المالية للمستخدم
+            وجود هذا التابع للتجربة فقط
+            </summary>
+            <param name="OurId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Card.WebApi.Controllers.UserWithdrawCreditController">
+            <summary>
+            لطلب تسليم مبلغ من الموجود في الكريدت
+            هذا للمستخدم
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Controllers.UserWithdrawCreditController.RequestMony(Card.Services.Dtos.RequestMonyDto)">
+            <summary>
+            لطلب رصيد
+            هذا التابع للمستخدم
+            يمكن استخدامه من الأدمن ان مرر رقم المستخدم 
+            </summary>
+            <param name="dto"></param>
+            <returns>0 ---> كمية النقود التي طلبها أكبر من رصيده</returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.UserWithdrawCreditController.DeleteRequest(System.Int32)">
+            <summary>
+            لحذف عملية سحب
+            لايمكن حذف عملية سحب حالتها تم الدفع
+            يمكن استخدام هذا التابع من الأدمن أو من المستخدم
+            </summary>
+            <param name="RequestId"></param>
+            
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.UserWithdrawCreditController.GetAllRequests(System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            جلب سجل الطلبات لمستخدم محدد 
+            </summary>
+            <param name="page"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.UserWithdrawCreditController.GetRequestbyId(System.Int32)">
+            <summary>
+            جلب تفاصيل طلب
+            </summary>
+            <param name="RequestId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Card.WebApi.Controllers.AdminWithdrawCreditController">
+            <summary>
+            هذا القسم خاص بالأدمن
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminWithdrawCreditController.RequestMony(Card.Services.Dtos.RequestMonyDto,System.Guid)">
+            <summary>
+            لطلب رصيد
+            هذا التابع للمستخدم
+            يمكن استخدامه من الأدمن ان مرر رقم المستخدم 
+            </summary>
+            <param name="dto"></param>
+            <param name="userId"></param>
+            <returns>0 ---> كمية النقود التي طلبها أكبر من رصيده</returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminWithdrawCreditController.DeleteRequest(System.Int32)">
+            <summary>
+            لحذف عملية سحب
+            لايمكن حذف عملية سحب حالتها تم الدفع
+            يمكن استخدام هذا التابع من الأدمن أو من المستخدم
+            </summary>
+            <param name="RequestId"></param>
+            
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminWithdrawCreditController.Change_RequestState(System.Int32,Card.Common.WithdrawStatus_Enum)">
+            <summary>
+            لتغيير حالة سحب 
+            هذا التابع يستخدمه فقط الأدمن
+            </summary>
+            <param name="RequestId">معرف عملية السحب</param>
+            <param name="newState">الحالة الجديدة</param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminWithdrawCreditController.GetAllRequests(System.Nullable{System.Int32},System.Int32,System.Guid)">
+            <summary>
+            جلب سجل الطلبات لمستخدم محدد 
+            </summary>
+            <param name="page"></param>
+            <param name="pageSize"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminWithdrawCreditController.GetRequestbyId(System.Int32)">
+            <summary>
+            جلب تفاصيل طلب
+            </summary>
+            <param name="RequestId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminWithdrawCreditController.GetNewRequests(System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            جلب جميع الطلبات الجديدة التي حالتها غير مدفوعة
+            للأدمن فقط 
+            </summary>
+            <param name="page"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminWithdrawCreditController.UpdateUserCredit(System.Guid,System.Decimal)">
+            <summary>
+            هذا للأدمن فقط
+            لتعديل الكريدت الخاصة بمستخدم معين 
+            </summary>
+            <param name="userId"></param>
+            <param name="new_CredirAmount"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Card.WebApi.Controllers.OrderController">
+            <summary>
+            هذا للمستخدم
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Controllers.OrderController.AddNewOrder(Card.Services.Dtos.InputOrderDto)">
+            <summary>
+            هذا التابع لبيع بطاقات
+            يستخدم هذا التابع الزبون
+            لايستخدم من قبل الأدمن
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.OrderController.DeleteOrder(System.Int32)">
+            <summary>
+            هذا التابع لحذف طلب بيع بطاقات
+            يستخدم هذا التابع الأدمن والمستخدم النهائي
+            لايستطيع أي شخص حذف طلب وهو بحالة تم الدفع
+            Delete Order
+            </summary>
+            <param name="OrderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.OrderController.GetAllOrderForUser(System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            لجلب جميع الطلبات الخاصة بمستخدم معين
+            يستخدمه الادمن والمستخدم النهائي 
+            </summary>
+            <param name="page">رقم الصفحة</param>
+            <param name="pageSize">حجم الصفحة الواحدة</param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.OrderController.GetOrderDetailedforUser(System.Int32)">
+            <summary>
+            لجلب تفاصيل طلب الخاص بمستخدم معين
+            يستخدمه الادمن والمستخدم النهائي
+            </summary>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Card.WebApi.Controllers.AdminOrderController">
+            <summary>
+            هذا القسم خاص بالأدمن
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminOrderController.UpdateStateOfOrder(Card.Services.Dtos.InputOrderDto)">
+            <summary>
+            هذا التابع فقط لتغيير حالة طلب
+            يستخدم هذا التابع فقط الأدمن
+            
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminOrderController.DeleteCardFormOrder(System.Int32)">
+            <summary>
+            هذا التابع لحذف احدى البطاقات من طلب 
+            يستخدم هذا التابع الأدمن
+            ملاحظة: لا يحق للأدمن حذف احدى البطاقات أو تعديلها إن كانت حالة الطلب تم الدفع
+            </summary>
+            <param name="OrderCardId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminOrderController.UpdateStateofCardInOrder(Card.Services.Dtos.InputOrderCardDto)">
+            <summary>
+            هذا التابع لتحديث حالةبطاقة ضمن طلب 
+            يستخدم هذا التابع الأدمن
+            ملاحظة: لا يحق للأدمن تغيير حالة احدى البطاقات إن كانت حالة الطلب تم الدفع
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminOrderController.DeleteOrder(System.Int32)">
+            <summary>
+            هذا التابع لحذف طلب بيع بطاقات
+            يستخدم هذا التابع الأدمن والمستخدم النهائي
+            لايستطيع أي شخص حذف طلب وهو بحالة تم الدفع
+            Delete Order
+            </summary>
+            <param name="OrderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminOrderController.GetAllOrderForUser(System.Nullable{System.Int32},System.Int32,System.Guid)">
+            <summary>
+            لجلب جميع الطلبات الخاصة بمستخدم معين
+            يستخدمه الادمن والمستخدم النهائي 
+            </summary>
+            <param name="page">رقم الصفحة</param>
+            <param name="pageSize">حجم الصفحة الواحدة</param>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminOrderController.GetOrderDetailedforUser(System.Int32,System.Guid)">
+            <summary>
+            لجلب تفاصيل طلب الخاص بمستخدم معين
+            يستخدمه الادمن والمستخدم النهائي
+            </summary>
+            <param name="orderId"></param>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminOrderController.GetAllNewOrdersForAdmin(System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            لجلب جميع الطلبات الجديدة
+            يستخدمه الادمن فقط 
+            </summary>
+            <param name="page"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminOrderController.GetOrderDetailedforAdmin(System.Int32)">
+            <summary>
+            لجلب تفاصيل طلب
+            يستخدمه الأدمن فقط 
+            </summary>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Card.WebApi.Controllers.CardController">
+            <summary>
+            هذا للمستخدم
+            </summary>
+        </member>
+        <member name="T:Card.WebApi.Controllers.AdminCardController">
+            <summary>
+            هذا القسم خاص بالأدمن
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminCardController.Delete(System.Int32)">
+            <summary>
+            Notes: this function has been modified
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Card.WebApi.Controllers.AdminCategoryController">
+            <summary>
+            هذا القسم خاص بالأدمن
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminCategoryController.Delete(System.Int32)">
+            <summary>
+            Notes: this function has been modified
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminCategoryController.TestPostImageBase64(System.String,System.Int32)">
+            <summary>
+            Notes: this function has been modified
+            </summary>
+            <param name="extension"></param>
+            <param name="CatigoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Card.WebApi.Controllers.AdminExcelController">
+            <summary>
+            هذا القسم خاص بالأدمن
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminExcelController.GetExcel(System.DateTime,System.DateTime,System.Int32,System.Decimal)">
+            <summary>
+            هذا التابع للأدمن فقط
+            </summary>
+            <param name="firstDate">بدء المجال الزمني</param>
+            <param name="EndDate">نهاية المجال الزمني</param>
+            <param name="CardId">نوع البطاقة </param>
+            <param name="Amount">قيمة البطاقة</param>
+            <returns></returns>
+        </member>
+        <member name="T:Card.WebApi.Controllers.CategoryController">
+            <summary>
+            هذا للمستخدم
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Controllers.CategoryController.Get(Card.Services.Dtos.CategoryGetDto)">
+            <summary>
+            Notes: this function has been modified
+            Get Category by id
+            </summary>
+            <param name="dto"> Category Id </param>
+            <returns>CategoryDto</returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.CategoryController.GetBaseCategories(Card.Services.Dtos.CategoryGetDto)">
+            <summary>
+            Notes: this function has been modified
+            Get Base Categories
+            </summary>
+            <returns>CategoryDto</returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.CategoryController.GetCategoryTree(Card.Services.Dtos.CategoryGetDto)">
+            <summary>
+            Notes: this function has been modified
+            </summary>
+            <param name="dto"></param>
+            <returns>CategoryDto</returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.CategoryController.CategoryPathFinder(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="CategoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.CategoryController.GetAll(Card.Services.Dtos.CategoryGetDto)">
+            <summary>
+            Notes: this function has been modified
+            </summary>
+            <returns>CategoryDto</returns>
+        </member>
+        <member name="T:Card.WebApi.Controllers.ComplaintController">
+            <summary>
+            This is a new controller for Complaint
+            </summary>
+        </member>
+        <member name="M:Card.WebApi.Controllers.ComplaintController.AddNewComplaint(Card.Services.Dtos.ComplaintDto)">
+            <summary>
+            This function for user, 
+            Add a Complaint
+            </summary>
+            <param name="dto"></param>
+            <returns>Complaint id</returns>  
+        </member>
+        <member name="M:Card.WebApi.Controllers.ComplaintController.Delete_Complaint(System.Int32)">
+            <summary>
+            This function for admin, 
+            Delete Complaint
+            </summary>
+            <param name="id">Complaint Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.ComplaintController.GetAllComplaints">
+            <summary>
+            this for admin
+            Get All Complaints, 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.ComplaintController.GetComplaintById(System.Int32)">
+            <summary>
+            this for admin
+            Get Complaint by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AppVersionsController.GetLastVersion(System.Int32)">
+            <summary>
+            Get last Version
+            </summary>
+            <param name="ApplicationType">if manager app is 1 , if user app is 2</param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminAppVersionsController.AddNewVersion(Card.Services.Dtos.AppVersionsDto)">
+            <summary>
+            This function for admin, 
+            Add new App Version
+            </summary>
+            <param name="dto"></param>
+            <returns>Version id</returns>  
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminAppVersionsController.Delete_Version(System.Int32)">
+            <summary>
+            This function for admin, 
+            Delete version
+            </summary>
+            <param name="id">Version Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminAppVersionsController.GetAllVersions">
+            <summary>
+            Get All Versions, 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminAppVersionsController.GetVersionById(System.Int32)">
+            <summary>
+            Get Version by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Controllers.AdminAppVersionsController.GetLastVersion(System.Int32)">
+            <summary>
+            Get last Version
+            </summary>
+            <param name="ApplicationType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.WebApi.Providers.ApplicationOAuthProvider.Decrypt(System.String,System.String)">
+            <summary>
+            this for Decrypt password for faceook login
+            </summary>
+            <param name="input"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SignalRChat.ChatHub">
+            <summary>
+            Use authorization mode by add new header with Authorization key
+            Use User-Agent mode by add new header with User-Agent key and "a" for value
+            </summary>
+        </member>
+        <member name="M:SignalRChat.ChatHub.OnConnected">
+            <summary>
+            Call this function one time when you connect with this hub
+            </summary>
+            <param name="imei"></param>
+            /// <returns>Tuple from to list
+            first list int for count of messages 
+            second list MessageDto for first message
+            </returns>
+        </member>
+    </members>
+</doc>

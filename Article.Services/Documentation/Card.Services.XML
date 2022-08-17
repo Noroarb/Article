@@ -1,0 +1,2902 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Card.Services</name>
+    </assembly>
+    <members>
+        <member name="T:Card.Services.Dtos.AllOrdersCardsDto">
+            <summary>
+            Card
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.AllOrdersCardsDto.CardType">
+            <summary>
+            نوع البطاقة
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.AllOrdersCardsDto.OrdersCardsDto">
+            <summary>
+            تفاصيل البطاقة
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.CalculatinDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CalculatinDto.Name">
+            <summary>
+            نوع البطاقة
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CalculatinDto.simpleUser_Price">
+            <summary>
+            سعر البطاقة للمستخدم العادي
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CalculatinDto.VIPUser_Price">
+            <summary>
+            سعر البطاقة لمستخدم الجملة
+            VIP
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CalculatinDto.SoldPrice">
+            <summary>
+            سعر المبيع للبطاقة في هذا اليوم
+            VIP
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CalculatinDto.NumberOfPending">
+            <summary>
+            عدد البطاقات في حالة pending
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CalculatinDto.PriceAllPending">
+            <summary>
+            سعر جميع البطاقات التي في حالة Pending 
+            التي تنتمي لنفس هذا النوع
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CalculatinDto.NumberOfVerified">
+            <summary>
+            عدد البطاقات في حالة Verified
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CalculatinDto.PriceAllVerified">
+            <summary>
+            سعر جميع البطاقات التي في حالة Verified  
+            التي تنتمي لنفس هذا النوع
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CalculatinDto.NumberOfMonyRequests">
+            <summary>
+            عدد طلبات السحب
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CalculatinDto.PriceOfMonyRequests">
+            <summary>
+            المبلغ الاجمالي للسحوبات
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CalculatinDto.Newcards_Count">
+            <summary>
+            عدد بطاقات الجديدة
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CalculatinDto.TotalNewCards_Price">
+            <summary>
+            السعر الإجمالي للبطاقات الجديدة
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.Email_LogDto">
+            <summary>
+            Email log
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.Email_LogDto.Id">
+            <summary>
+            email log id 
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.FinancialAccountsDto">
+            <summary>
+            المعلومات المالية للمستخدمي
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.FinancialAccountsDto.Email">
+            <summary>
+            ايميل المستخدم
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.FinancialAccountsDto.PhoneNumber">
+            <summary>
+            رقم هاتف المستخدم
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.FinancialAccountsDto.FullName">
+            <summary>
+            الاسم الكامل للمستخدم
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.FinancialAccountsDto.TotalAmount">
+            <summary>
+            الكمية الاجمالية من البطاقات
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.FinancialAccountsDto.TotalPrice">
+            <summary>
+            المبلغ الاجمالي
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.ClientAreaDto">
+            <summary>
+            Client area
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ClientAreaDto.CurrentCredit">
+            <summary>
+            رصيد الزبون الحالي
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ClientAreaDto.TotalCredit">
+            <summary>
+            الرصيد الكلي ويشمل الرصيد الحالي + الرصيد في حالة الانتظار+ الرصيد المسحوب
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ClientAreaDto.PendingCredit">
+            <summary>
+            الرصيد في حالة الانتظار
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ClientAreaDto.ReceivedCredit">
+            <summary>
+            الرصيد المقبوض أو المسحوب
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ClientAreaDto.rejectedCredit">
+            <summary>
+            المبلغ المرفوض
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ClientAreaDto.TotalNumberOfOrders">
+            <summary>
+            عدد الطلبات الكلي
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ClientAreaDto.NumberOfPendingOrders">
+            <summary>
+            عدد الطلبات في حالة الانتظار
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ClientAreaDto.NumberOfrejectedOrders">
+             <summary>
+            الطلبات المرفوضة 
+             </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ClientAreaDto.NumberOfpaidedOrders">
+             <summary>
+            الطلبات المقبولة 
+             </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.ChartDto">
+            <summary>
+            من أجل المخططات الإحصائية
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ChartDto.dateOfOrder">
+            <summary>
+            تاريخ إضافة البطاقات
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ChartDto.OrderCount">
+            <summary>
+            عدد طلبات البطاقات 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ChartDto.dateOfWithdraw">
+            <summary>
+            تاريخ طلبات السحب
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ChartDto.WithdrawCount">
+            <summary>
+            عدد طلبات السحب
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ChartDto.dateOfOrderCards">
+            <summary>
+            تاريخ إضافة البطاقات
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ChartDto.CardsCount">
+            <summary>
+            عدد البطاقات 
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.InputOrderCardDto2">
+            <summary>
+            
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Card.Services.Dtos.InputOrderCardDto2.Name" -->
+        <member name="P:Card.Services.Dtos.InputOrderCardDto2.Phone">
+            <summary>
+            Phon number
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputOrderCardDto2.WithdrawWay">
+            <summary>
+            طريقة تسليم النقود
+            Status:
+            عن طريق الهرم--> 0
+            تسليم باليد--> 1
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputOrderCardDto2.Notes">
+            <summary>
+            ملاحظات للطلب
+            يستطيع فقط الأدمن إضافة ملاحظات إلى الطلب
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputOrderCardDto2.URL_Or_Code">
+            <summary>
+            كود البطاقة 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputOrderCardDto2.Amount">
+            <summary>
+            كمية البطاقة
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputOrderCardDto2.CardStatus">
+            <summary>
+            الحالة الخاصة بحالة بطاقة
+            Status:
+            Valid--> 0
+            Invalid--> 1
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.TargetDto">
+            <summary>
+            Target for text verification
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.SetForgotPasswordDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.Verification_TextAPIDto">
+            <summary>
+            Verification for text verifiaction website Dto
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.VerificationDto">
+            <summary>
+            Verification Dto
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.VerificationDto.AdditionDate">
+            <summary>
+            Request Time
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.VerificationDto.IsPaid">
+            <summary>
+            تكون قيمته 1 عند بداية طلب الرقم ثم يتم اعادة قيمته للصفر ان لم يتم وصول الكود
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.CardDto">
+            <summary>
+            Card
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CardDto.Name">
+            <summary>
+            نوع البطاقة
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CardDto.simpleUser_Price">
+            <summary>
+            سعر البطاقة للمستخدم العادي
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CardDto.VIPUser_Price">
+            <summary>
+            سعر البطاقة لمستخدم الجملة
+            VIP
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CardDto.TimeAuto">
+            <summary>
+            الزمن اللازم للتحول من حالة
+            Pending 
+            الى حالة
+            Verified
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.MonyDto">
+            <summary>
+            عمليات السحب وتفاصيلها
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MonyDto.UserId">
+            <summary>
+            المستخدم الذي سحب النقود
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MonyDto.UserName">
+            <summary>
+            اسم المستخدم الذي سحب النقود
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MonyDto.Status">
+            <summary>
+            الحالة الخاصة بعملية سحب النقود
+            Status:
+            pending--> 0
+            paid--> 1
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MonyDto.Amount">
+            <summary>
+            كمية النقود المسحوبة
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MonyDto.StartOrderTime">
+            <summary>
+            وقت وتاريخ الطلب
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MonyDto.PaidTime">
+            <summary>
+            وقت وتاريخ الدفع
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MonyDto.City">
+            <summary>
+            المحافظة
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MonyDto.WithdrawWay">
+            <summary>
+            طريقة تسليم النقود
+            Status:
+            عن طريق الهرم--> 0
+            تسليم باليد--> 1
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MonyDto.Image">
+            <summary>
+            صورة الشيك
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.RequestMonyDto">
+            <summary>
+            طلب أموال من الحساب
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RequestMonyDto.Amount">
+            <summary>
+             المبلغ المطلوب
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RequestMonyDto.Phone">
+            <summary>
+            Phon number
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RequestMonyDto.WithdrawWay">
+            <summary>
+            طريقة تسليم النقود
+            Status:
+            عن طريق الهرم--> 0
+            تسليم باليد--> 1
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RequestMonyDto.City">
+            <summary>
+            المحافظة
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ComplaintDto.UserId">
+            <summary>
+            set it null
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ComplaintDto.PhoneNumber">
+            <summary>
+            user Phone Number
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ComplaintDto.Title">
+            <summary>
+            Complaint Title
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ComplaintDto.Body">
+            <summary>
+            Complaint Body
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ComplaintDto.Date">
+            <summary>
+            Version date
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.EditCategoryDto">
+            <summary>
+            Category for admin
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.EditCategoryDto.Id">
+            <summary>
+            Id required for edit not for insert
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.EditCategoryDto.ParentID">
+            <summary>
+            The Id for the parent of this category 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.EditCategoryDto.Sort">
+            <summary>
+            Category sort 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.EditCategoryDto.WhatsAppNumber">
+            <summary>
+            رقم الواتس للشخص المسؤول عن هذه الخدمة
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.EditCategoryDto.ArabicName">
+            <summary>
+            Category name in arabic
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.EditCategoryDto.EnglishName">
+            <summary>
+            Category name in english
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.EditCategoryDto.ImagePath">
+            <summary>
+            Image category path , 
+            This is for show when edit
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.EditCategoryDto.CategoryChildren">
+            <summary>
+            This for Get not for input,  
+            list of this category's children
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.EditCategoryDto.HasChildren">
+            <summary>
+            This for Get not for input,  
+            Show that this category has children or not
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.CategoryDto">
+            <summary>
+            Category
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CategoryDto.Id">
+            <summary>
+            Category Id 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CategoryDto.Sort">
+            <summary>
+            Category sort 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CategoryDto.HasChildren">
+            <summary>
+            Show that this category has children or not
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CategoryDto.WhatsAppNumber">
+            <summary>
+            رقم الواتس للشخص المسؤول عن هذه الخدمة
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CategoryDto.CategoryName">
+            <summary>
+            Category name
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CategoryDto.ImagePath">
+            <summary>
+            Image category path 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CategoryDto.Path">
+            <summary>
+            Category path
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CategoryDto.CategoryChildren">
+            <summary>
+            list of this category's children
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CategoryDto.IsActive">
+            <summary>
+            The State of this category
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.CategoryGetDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CategoryGetDto.Id">
+            <summary>
+            Category/Guide Id, you can put it null if you want to get base category
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.CityDto">
+            <summary>
+            City
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CityDto.Id">
+            <summary>
+            City Id 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CityDto.CityName">
+            <summary>
+            City name
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CityDto.TownsDto">
+            <summary>
+            List of towns that belong to this city
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.InputCategoryDto">
+            <summary>
+            Input category
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputCategoryDto.Id">
+            <summary>
+            Id required for edit not for insert
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputCategoryDto.WhatsAppNumber">
+            <summary>
+            رقم الواتس للشخص المسؤول عن هذه الخدمة
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputCategoryDto.ParentID">
+            <summary>
+            في هذا المشروع يمكنك تجاهل هذا البارامتر
+            The Id for the parent of this category 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputCategoryDto.Sort">
+            <summary>
+            Category sort 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputCategoryDto.ArabicName">
+            <summary>
+            Category name in arabic
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputCategoryDto.EnglishName">
+            <summary>
+            Category name in english
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputCategoryDto.IsActive">
+            <summary>
+            Show that this category is active or not
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputCityDto.Id">
+            <summary>
+            Id required for edit not for insert
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputCityDto.Sort">
+            <summary>
+            This field is necessary for order
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputCityDto.ArabicCityName">
+            <summary>
+            City name in arabic
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputCityDto.EnglishCityName">
+            <summary>
+            City name in english
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.FavoriteRestaurantDto">
+            <summary>
+            this object for Favorite Restaurant
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.FavoriteRestaurantDto.ProductId">
+            <summary>
+            Product Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.FavoriteRestaurantDto.Date">
+            <summary>
+            not set it when add
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.InputMessageDto">
+            <summary>
+            For add new Message 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputMessageDto.MessageMobileId">
+            <summary>
+            Ayiosh Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputMessageDto.ReceiverId">
+            <summary>
+            Id of receiver
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputMessageDto.Body">
+            <summary>
+            message Contain
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputMessageDto.IsFile">
+            <summary>
+            Show that this message is file or not
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.OrdersCardsDto">
+            <summary>
+            البطاقات ضمن الطلب الواحد
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrdersCardsDto.CardType">
+            <summary>
+            نوع البطاقة
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrdersCardsDto.URL_Or_Code">
+            <summary>
+            كود البطاقة 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrdersCardsDto.Amount">
+            <summary>
+            كمية البطاقة
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrdersCardsDto.CardPrice_Unit">
+            <summary>
+            السعر الافرادي للبطاقة
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrdersCardsDto.Total_CardPricePrice">
+            <summary>
+            السعر الاجمالي للبطاقة 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrdersCardsDto.Notes">
+            <summary>
+            الملاحظات الخاصة بهذه البطاقة
+            حقل احتياطي غير مستخدم حاليا
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrdersCardsDto.UserName">
+            <summary>
+            اسم الزبون
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrdersCardsDto.PhoneNumber">
+            <summary>
+            رقم هاتف الزبون 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrdersCardsDto.CardStatus">
+            <summary>
+            الحالة الخاصة بحالة بطاقة
+            Status:
+            Valid--> 0
+            Invalid--> 1
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.OrderDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderDto.UserId">
+            <summary>
+            User Id 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderDto.OrderState">
+            <summary>
+            حالة الطلب
+            pending--> 0
+            paid--> 1
+            Invalid--> 2
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderDto.Total_Order_Price">
+            <summary>
+            total price 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderDto.AdditionDate">
+            <summary>
+            Order Addition date
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.InputOrder_SingleRestaurantDto">
+            <summary>
+            this object In order to determine the restaurants which user order from
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.MessageConnectionGroupsDto">
+            <summary>
+            MessageConnectionGroupsDto 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageConnectionGroupsDto.IMEI">
+            <summary>
+            Mobile IMEI number
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.MessagingDto">
+            <summary>
+            this object for Get message
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessagingDto.ReceiverId">
+            <summary>
+            User who receive this message
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessagingDto.ReceiverName">
+            <summary>
+            Minimum length 3 char, 
+            Max length 75 char
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessagingDto.ReceiverPhoneNumber">
+            <summary>
+            Minimum length 4 Number, 
+            Max length 10 Number
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessagingDto.Body">
+            <summary>
+            The contents of this message
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.MessageDto">
+            <summary>
+            Message 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageDto.Id">
+            <summary>
+            Message id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageDto.MessageMobileId">
+            <summary>
+            Ayiosh Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageDto.SenderId">
+            <summary>
+            Id of sender
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageDto.SenderName">
+            <summary>
+            Sender name
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageDto.ReceiverId">
+            <summary>
+            Id of receiver
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageDto.ReceiverName">
+            <summary>
+            Receiver name
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageDto.Body">
+            <summary>
+            message Contain
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageDto.IsFile">
+            <summary>
+            Show that this message is file or not
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageDto.IsReceived">
+            <summary>
+            
+            Show that if message is received or not
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageDto.IsSeen">
+            <summary>
+            Show that if message is seen or not
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageDto.SendingDate">
+            <summary>
+            Sending Date
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageDto.ReceivedDate">
+            <summary>
+            Received Date
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageDto.ShowingDate">
+            <summary>
+            Showing Date
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageDto.Receiverstatus">
+            <summary>
+            Receiver status, if online return true
+            if we return you list of this class, you receive Receiver status just in first item
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageDto.DisconnectDate">
+            <summary>
+            Receiver disconnect Date; if receiver status is true(online), don't use this value 
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.MessageUserInfoDto">
+            <summary>
+            Message 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageUserInfoDto.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageUserInfoDto.IsOnline">
+            <summary>
+            User status, if online return true
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageUserInfoDto.ConnectionDate">
+            <summary>
+            Connection Date
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.MessageUserInfoDto.DisconnectionDate">
+            <summary>
+            Disconnection Date
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.AppVersionsDto.VersionNumber">
+            <summary>
+            App Version Number
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.AppVersionsDto.Link">
+            <summary>
+            App Version Link
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.AppVersionsDto.ApplicationType">
+            <summary>
+            if manager app is 1 , if user app is 2
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.AppVersionsDto.Date">
+            <summary>
+            Version date
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.OrderStatusDto">
+            <summary>
+            this object for get order status
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderStatusDto.Status">
+            <summary>
+            Order status
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderStatusDto.Message">
+            <summary>
+            Message for client
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderStatusDto.Phone">
+            <summary>
+            رقم الشكاوي
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.OrderSimplifyDto">
+            <summary>
+            this object for order but simplify
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderSimplifyDto.SourceName">
+            <summary>
+            تعبر عن مصدر الطلب ان كان من التطبيق اة اسم الموظف الذي ادخل الطلب
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderSimplifyDto.UserId">
+            <summary>
+            User Id who is ordering
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderSimplifyDto.Name">
+            <summary>
+            Person name who is ordering
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderSimplifyDto.Phone">
+            <summary>
+            Phon number
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderSimplifyDto.AddressDetailed">
+            <summary>
+            The Address Detailed of the person ordering
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Card.Services.Dtos.OrderSimplifyDto.facebook" -->
+        <member name="P:Card.Services.Dtos.OrderSimplifyDto.RestaurantImage">
+            <summary>
+            First restaurant image
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderSimplifyDto.AdditionDate">
+            <summary>
+            Order Addition date
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderSimplifyDto.OrderIdenity">
+            <summary>
+            عبارة عن رمز لتمييز الطلبية
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderSimplifyDto.OrderStatus">
+            <summary>
+            Order status
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.OrderProductDto">
+            <summary>
+            this object In order to get the quantity and type of Products
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderProductDto.ProductId">
+            <summary>
+            Product Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderProductDto.Name">
+            <summary>
+            Product name
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderProductDto.MinAmount">
+            <summary>
+            minimum amount
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderProductDto.NewPrice">
+            <summary>
+            Unit price 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderProductDto.Image">
+            <summary>
+            main image of this product
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderProductDto.Amount">
+            <summary>
+            Amount of this product
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderProductDto.TotalPrice">
+            <summary>
+            total price 
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.OrderDetailedDto">
+            <summary>
+            تفاصيل الطلب
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderDetailedDto.UserId">
+            <summary>
+            User Id 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderDetailedDto.Name">
+            <summary>
+            Person name who is ordering
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderDetailedDto.Phone">
+            <summary>
+            Phon number
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderDetailedDto.OrderState">
+            <summary>
+            حالة الطلب
+            pending--> 0
+            paid--> 1
+            Invalid--> 2
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderDetailedDto.City">
+            <summary>
+            المحافظة
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderDetailedDto.WithdrawWay">
+            <summary>
+            طريقة تسليم النقود
+            Status:
+            عن طريق الهرم--> 0
+            تسليم باليد--> 1
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderDetailedDto.facebook">
+            <summary>
+            facebook
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderDetailedDto.ProfileImage">
+            <summary>
+            الصورة الشخصية لصاحب الطلب
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderDetailedDto.Total_Order_Price">
+            <summary>
+            total price 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderDetailedDto.AdditionDate">
+            <summary>
+            Order Addition date
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OrderDetailedDto.Notes">
+            <summary>
+            Notes
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.InputOrderCardDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputOrderCardDto.URL_Or_Code">
+            <summary>
+            كود البطاقة 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputOrderCardDto.Amount">
+            <summary>
+            كمية البطاقة
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputOrderCardDto.Notes">
+            <summary>
+            الملاحظات الخاصة بهذه البطاقة
+            حقل احتياطي غير مستخدم حاليا
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputOrderCardDto.CardStatus">
+            <summary>
+            الحالة الخاصة بحالة بطاقة
+            Status:
+            Valid--> 0
+            Invalid--> 1
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.InputOrderDto">
+            <summary>
+            this object for input order
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputOrderDto.Name">
+            <summary>
+            Person name who is ordering
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputOrderDto.Phone">
+            <summary>
+            Phon number
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputOrderDto.OrderState">
+            <summary>
+            حالة الطلب
+            pending--> 0
+            paid--> 1
+            Invalid--> 2
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputOrderDto.WithdrawWay">
+            <summary>
+            طريقة تسليم النقود
+            Status:
+            عن طريق الهرم--> 0
+            تسليم باليد--> 1
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputOrderDto.Notes">
+            <summary>
+            ملاحظات للطلب
+            يستطيع فقط الأدمن إضافة ملاحظات إلى الطلب
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputTownDto.Id">
+            <summary>
+            Id required for edit not for insert
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputTownDto.CityId">
+            <summary>
+            required , City's Id where this town is located  
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputTownDto.ArabicTownName">
+            <summary>
+            required , Town name in arabic  
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputTownDto.EnglishTownName">
+            <summary>
+            required , Town name in english  
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.GetMessagesDto">
+            <summary>
+            Object to demand the messages
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.GetMessagesDto.anotherUserId">
+            <summary>
+            The user Id of the another person
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.GetMessagesDto.pageSize">
+            <summary>
+            Page size
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.GetMessagesDto.page">
+            <summary>
+            Page number
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.LanguageDto.Id">
+            <summary>
+            Id required for edit not for insert
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.LanguageDto.Code">
+            <summary>
+            Code should be 2 length only
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.LanguageDto.ArabicName">
+            <summary>
+            required , Maximum 100 characters length 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.LanguageDto.EnglishName">
+            <summary>
+            required , Maximum 100 characters length 
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.InputProductDto">
+            <summary>
+            add product or edit
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputProductDto.Id">
+            <summary>
+            Id required for edit not for insert
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputProductDto.CategoryId">
+            <summary>
+            Category Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputProductDto.RestaurantId">
+            <summary>
+            Restaurant Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputProductDto.MinAmount">
+            <summary>
+            minimum amount
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputProductDto.Name">
+            <summary>
+            Product name
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputProductDto.Description">
+            <summary>
+            Product description
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputProductDto.productOffer">
+            <summary>
+            product offer
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputProductDto.State">
+            <summary>
+            State of location...
+            Stop = 0, Active = 1, Deleted = 2, StopByAdminAfterStop = 3, StopByAdminAfterActive = 4
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputProductDto.OldPrice">
+            <summary>
+            Price this product before discount
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputProductDto.NewPrice">
+            <summary>
+            Price this product after discount
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.NotificationdictionaryDto">
+            <summary>
+            Notification send to device as dictionary  
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.NotificationdictionaryDto.Id">
+            <summary>
+            Id of this notification
+            required for update, not for add
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.NotificationdictionaryDto.Type">
+            <summary>
+            determine type of notification Update = 0,Product = 1, Message = 2, AdminAdvertisement = 3 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.NotificationdictionaryDto.ProductId">
+            <summary>
+            id of this Product
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.NotificationdictionaryDto.Image">
+            <summary>
+            image path 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.NotificationdictionaryDto.Title">
+            <summary>
+            Title of this Product, Or notify Title if type is AdminAdvertisement
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.NotificationdictionaryDto.Discription">
+            <summary>
+            Description of this Product, Or notify Discription if type is AdminAdvertisement
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.NotificationdictionaryDto.Body">
+            <summary>
+            message Contain
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.NotificationdictionaryDto.Update">
+            <summary>
+            If type equal to zero, this field contains URL of new version
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.NotificationdictionaryDto.NotifyDate">
+            <summary>
+            Notify Date
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.InputPaidAdsDto">
+            <summary>
+            Input Paid AdsDto
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputPaidAdsDto.Id">
+            <summary>
+            required for update, not for add
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputPaidAdsDto.Link">
+            <summary>
+            Facebook or web site link
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputPaidAdsDto.ImageName">
+            <summary>
+            Ad Name, you can take it null
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputPaidAdsDto.extension">
+            <summary>
+            ImageName extension, jpg, png or gif without dot
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.OutputMessageDto">
+            <summary>
+            For send this Message 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OutputMessageDto.Id">
+            <summary>
+            Message id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OutputMessageDto.MessageMobileId">
+            <summary>
+            Ayiosh Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OutputMessageDto.ReceiverId">
+            <summary>
+            Id of receiver
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OutputMessageDto.SenderId">
+            <summary>
+            Id of sender
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OutputMessageDto.SenderName">
+            <summary>
+            NAme of sender
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OutputMessageDto.SendingDate">
+            <summary>
+            Date and time of sending this message
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OutputMessageDto.Body">
+            <summary>
+            message Contain
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.OutputMessageDto.IsFile">
+            <summary>
+            Show that this message is file or not
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.PaidAdsDto">
+            <summary>
+            Paid Ads
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.PaidAdsDto.Id">
+            <summary>
+            Ads Id, required for update, not for add
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.PaidAdsDto.Link">
+            <summary>
+            Facebook or web site link
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.PaidAdsDto.ImagePath">
+            <summary>
+            Ad image
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.PaidAdsDto.Date">
+            <summary>
+            Date added ad
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CoverageRestaurantAreaDto.RestaurantId">
+            <summary>
+            Restaurant Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.CoverageRestaurantAreaDto.CoverageArea">
+            <summary>
+            The areas served by this restaurant
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.ProductSimplifyDto">
+            <summary>
+            this for user
+            This object for get product as simplify
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyDto.Id">
+            <summary>
+            Product Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyDto.CategoryId">
+            <summary>
+            Category Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyDto.RestaurantId">
+            <summary>
+            Restaurant Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyDto.RestaurantName">
+            <summary>
+            Restaurant name
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyDto.Name">
+            <summary>
+            Product name
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyDto.Description">
+            <summary>
+            Product description
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyDto.MinAmount">
+            <summary>
+            minimum amount
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyDto.productOffer">
+            <summary>
+            product offer
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyDto.OldPrice">
+            <summary>
+            Price this product before discount
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyDto.NewPrice">
+            <summary>
+            Unit price
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyDto.Image">
+            <summary>
+            main image of this product
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyDto.Date">
+            <summary>
+            The date and time when this product was added
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.ProductSimplifyFavoriteDto">
+            <summary>
+            this for user
+            This object for get product as simplify for Favorite
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyFavoriteDto.Id">
+            <summary>
+            Product Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyFavoriteDto.CategoryId">
+            <summary>
+            Category Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyFavoriteDto.RestaurantId">
+            <summary>
+            Restaurant Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyFavoriteDto.RestaurantName">
+            <summary>
+            Restaurant name
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyFavoriteDto.Name">
+            <summary>
+            Product name
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyFavoriteDto.Description">
+            <summary>
+            Product description
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyFavoriteDto.MinAmount">
+            <summary>
+            minimum amount
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyFavoriteDto.productOffer">
+            <summary>
+            product offer
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyFavoriteDto.OldPrice">
+            <summary>
+            Price this product before discount
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyFavoriteDto.DiscountPercentage">
+            <summary>
+            Discount percentage
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyFavoriteDto.NewPrice">
+            <summary>
+            Unit price
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyFavoriteDto.Image">
+            <summary>
+            main image of this product
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyFavoriteDto.Date">
+            <summary>
+            The date and time when this product was added
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyFavoriteDto.IsFavorite">
+            <summary>
+            Show if this product is favorite or not
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductSimplifyFavoriteDto.IsHasCard">
+            <summary>
+            Show that if this restaurant has Card or not
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.InputRestaurantDto">
+            <summary>
+            this object for input Restaurant
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputRestaurantDto.Id">
+            <summary>
+            Id Restaurant, required for edit
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputRestaurantDto.UserId">
+            <summary>
+            User Id who is manage this Restaurant, 
+            he is admin.... 
+            for future update
+            every restaurant has user
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputRestaurantDto.TownId">
+            <summary>
+            Town Id, required for all
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputRestaurantDto.State">
+            <summary>
+            State of Restaurant...
+            stop=> 0, active=> 1, pause=> 2
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputRestaurantDto.Sort">
+            <summary>
+            Order this Restaurant 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputRestaurantDto.RestaurantName">
+            <summary>
+            Restaurant name
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputRestaurantDto.RestaurantOffer">
+            <summary>
+            Restaurant offer 400 Char
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputRestaurantDto.LocationText">
+            <summary>
+            The place detailed where this Restaurant exist
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputRestaurantDto.Description">
+            <summary>
+            Description of this Restaurant
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.ProductDetailedDto">
+            <summary>
+            this for user
+            This object for get product detailed
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductDetailedDto.Id">
+            <summary>
+            Product Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductDetailedDto.CategoryId">
+            <summary>
+            Category Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductDetailedDto.RestaurantId">
+            <summary>
+            Restaurant Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductDetailedDto.RestaurantName">
+            <summary>
+            Restaurant name
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductDetailedDto.Date">
+            <summary>
+            date and time add this product
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductDetailedDto.Name">
+            <summary>
+            Product name
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductDetailedDto.Description">
+            <summary>
+            Product description
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductDetailedDto.MinAmount">
+            <summary>
+            minimum amount
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductDetailedDto.IsFavorite">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductDetailedDto.productOffer">
+            <summary>
+            product offer
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductDetailedDto.State">
+            <summary>
+            State of location...
+            Stop = 0, Active = 1, Deleted = 2, StopByAdminAfterStop = 3, StopByAdminAfterActive = 4
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductDetailedDto.ViewsCount">
+            <summary>
+            Views Count of this product
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductDetailedDto.OldPrice">
+            <summary>
+            Price this product before discount
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductDetailedDto.NewPrice">
+            <summary>
+            Price this product after discount
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductDetailedDto.Images">
+            <summary>
+            Images of this product
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.ProductDetailedDto.SimilarProducts">
+            <summary>
+            Similar Products
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.RestaurantInfoDto">
+            <summary>
+            this object for get Restaurant Info for user
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RestaurantInfoDto.Id">
+            <summary>
+            Id Restaurant
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RestaurantInfoDto.UserId">
+            <summary>
+            Restaurant manager Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RestaurantInfoDto.Sort">
+            <summary>
+            Order this Restaurant 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RestaurantInfoDto.RestaurantName">
+            <summary>
+            Restaurant name
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RestaurantInfoDto.ImagePath">
+            <summary>
+            Image path
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RestaurantInfoDto.ProductsCount">
+            <summary>
+            Number of products in this Restaurant
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RestaurantInfoDto.LocationText">
+            <summary>
+            The place detailed where this Restaurant exist
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RestaurantInfoDto.Description">
+            <summary>
+            Description of this Restaurant
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RestaurantInfoDto.State">
+            <summary>
+            State of Restaurant...
+            stop=> 0, active=> 1, pause=> 2
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.SearchProductsDto">
+            <summary>
+            This use as parameter
+            to get products in Restaurant
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.SearchProductsDto.Id">
+            <summary>
+            Get product by product id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.SearchProductsDto.RestaurantId">
+            <summary>
+            Restaurant Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.SearchProductsDto.MinPrice">
+            <summary>
+            minimum price
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.SearchProductsDto.MaxPrice">
+            <summary>
+            Maximum price
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.SearchProductsDto.CategoryId">
+            <summary>
+            Category Id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.SearchProductsDto.TownId">
+            <summary>
+            Get products by Town id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.SearchProductsDto.Text">
+            <summary>
+            Get products by name and description
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.SearchProductsDto.sorting">
+            <summary>
+            sorting
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.SearchProductsDto.pageSize">
+            <summary>
+            Page size
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.SearchProductsDto.page">
+            <summary>
+            Page number
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.InputMessagingDto">
+            <summary>
+            this object for input message
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputMessagingDto.Id">
+            <summary>
+            ID required for edit not for insert
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputMessagingDto.SenderName">
+            <summary>
+            If sender not registered, this field is required, 
+            Minimum length 3 char, 
+            Max length 75 char
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputMessagingDto.Location">
+            <summary>
+            Location of user
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.InputMessagingDto.SenderPhoneNumber">
+            <summary>
+            If sender not registered, this field is required
+            Minimum length 4 Number, 
+            Max length 10 Number
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.SearchRestaurantsDto">
+            <summary>
+            This use as parameter
+            to get Restaurants
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.SearchRestaurantsDto.ID">
+            <summary>
+            Get Restaurants by Restaurant id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.SearchRestaurantsDto.CityID">
+            <summary>
+            Get Restaurants by city id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.SearchRestaurantsDto.TownID">
+            <summary>
+            Get Restaurants by town id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.SearchRestaurantsDto.UserId">
+            <summary>
+            Get Restaurants by user id
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.SearchRestaurantsDto.pageSize">
+            <summary>
+            Page size
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.SearchRestaurantsDto.page">
+            <summary>
+            Page number
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.RestaurantDto">
+            <summary>
+            this object for get Restaurant for user
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RestaurantDto.Id">
+            <summary>
+            Id Restaurant
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RestaurantDto.Sort">
+            <summary>
+            Order this Restaurant 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RestaurantDto.RestaurantOffer">
+            <summary>
+            Restaurant offer 400 Char
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RestaurantDto.RestaurantName">
+            <summary>
+            Restaurant name
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RestaurantDto.ImagePath">
+            <summary>
+            Image path
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RestaurantDto.LocationText">
+            <summary>
+            The place detailed where this Restaurant exist
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RestaurantDto.Description">
+            <summary>
+            Description of this Restaurant
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.RestaurantDto.State">
+            <summary>
+            State of Restaurant...
+            stop=> 0, active=> 1, pause=> 2
+            </summary>
+        </member>
+        <member name="T:Card.Services.Dtos.TownDto">
+            <summary>
+            Town 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.TownDto.Id">
+            <summary>
+            Town Id 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.TownDto.CityId">
+            <summary>
+            City Id 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.TownDto.TownName">
+            <summary>
+            Town name 
+            </summary>
+        </member>
+        <member name="P:Card.Services.Dtos.UserDto.Credit">
+            <summary>
+            قيمة النقود الموجودة في رصيد المستخدم
+            </summary>
+        </member>
+        <member name="P:Card.Services.Identity.IdentityUser.IsActivated">
+            <summary>
+            يجب أن نمنع مستخدم من الطلب من خلال
+            هذا الحقل ويعبر عن حالة هذا المستخدم إن
+            كان مسموح له بإرسال الشكاوي والطلبات أم لا
+            </summary>
+        </member>
+        <member name="P:Card.Services.Identity.IdentityUser.ProfileImage">
+            <summary>
+            رابط الصورة الشخصية على الفيس بوك يمرر مع تسجيل الدخول
+            </summary>
+        </member>
+        <member name="M:Card.Services.Interfaces.ICardsService.CardPriceUpdate(Card.Services.Dtos.CardDto)">
+            <summary>
+            وسام
+            يستخدم هذا التابع لتعديل أسعار البطاقات
+            الأسعار فقط وليس اسم البطاقة
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.ICardsService.GetById(System.Int32)">
+            <summary>
+            وسام
+            جلب تفاصيل بطاقة معينة حسب 
+            Id
+            </summary>
+            <param name="cardId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.ICardsService.GetAll">
+            <summary>
+            وسام
+            جلب كامل البطاقات مع تفاصيلها
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.ICardsService.Add(Card.Services.Dtos.CardDto)">
+            <summary>
+            Add new Card
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.ICardsService.Delete(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IComplaintService.Add(Card.Services.Dtos.ComplaintDto)">
+            <summary>
+            For Admin
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IComplaintService.Delete(System.Int32)">
+            <summary>
+            For admin
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IComplaintService.GetAllComplaints">
+            <summary>
+            Get All Complaints, 
+            For admin
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IComplaintService.GetComplaintById(System.Int32)">
+            <summary>
+            Get Complaint by id, 
+            For admin
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.ICategoryService.Update_WhatsApp(Card.Services.Dtos.InputCategoryDto)">
+             <summary>
+             انتبه/////////////////////////////////////////
+             هذا التابع فقط يستخدمه وسام من توابع التعديل
+            يستخدم هذا التابع لتعديل رقم الموبايل للشخص المسؤول عن هذه الخدمة أو هذه الفئة/
+             أيضا يستخدم وسام توابع عرض الفئات من هذه الصفحة ولاداعي للسماح بإضافة أكثر من مستوى والاكتفاء بمستوى وحيد
+             </summary>
+             <param name="dto"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.ICategoryService.Add(Card.Services.Dtos.InputCategoryDto)">
+            <summary>
+            Add new category
+            </summary>
+            <param name="dto"></param>
+            <param name="ManagerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.ICategoryService.Delete(System.Int32)">
+            <summary>
+            note : if category has products this function return null
+            </summary>
+            <param name="id"></param>
+            <param name="managerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.ICategoryService.GetAll(Card.Common.LanguageHelper,Card.Services.Dtos.CategoryGetDto)">
+            <summary>
+            This for get all tree for user
+            </summary>
+            <param name="language"></param>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.ICategoryService.DeleteImage(System.Int32)">
+            <summary>
+            Delete Image
+            </summary>
+            <param name="CategoryId"></param>
+            <param name="ManagerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.ICategoryService.GetById_formanager_Edit(Card.Services.Dtos.CategoryGetDto)">
+            <summary>
+            Get Category By Id for manager Edit
+            </summary>
+            <param name="dto"></param>
+            <param name="RestaurantManagerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.ICategoryService.GetBaseCategories_forManager(Card.Common.LanguageHelper,Card.Services.Dtos.CategoryGetDto)">
+            <summary>
+            Get Base Categories for Manager
+            </summary>
+            <param name="language"></param>
+            <param name="dto"></param>
+            <param name="managerRestaurantId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.ICategoryService.GetAll_forManager(Card.Common.LanguageHelper,Card.Services.Dtos.CategoryGetDto)">
+            <summary>
+            This for get all tree for Restaurant manager
+            </summary>
+            <param name="language"></param>
+            <param name="dto"></param>
+            <param name="managerRestaurantId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IAppVersionsService.Add(Card.Services.Dtos.AppVersionsDto)">
+            <summary>
+            For Admin
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IAppVersionsService.Delete(System.Int32)">
+            <summary>
+            For admin
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IAppVersionsService.GetAllVersions">
+            <summary>
+            Get All Versions, 
+            For admin
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IAppVersionsService.GetVersionById(System.Int32)">
+            <summary>
+            Get Version by id, 
+            For admin
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IAppVersionsService.GetLastVersion(System.Int32)">
+            <summary>
+            Get last Version, 
+            For user
+            </summary>
+            <param name="ApplicationType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IVerificationService.GetPhoneNumber(Card.Services.Dtos.VerificationDto,System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="dto"></param>
+            <param name="UserId"></param>
+            <returns>
+            return 0 when user hasn't enough money in his account
+            </returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IVerificationService.DeletePhoneNumber(System.Int32)">
+            <summary>
+            هذا التابع لحذف رقم طلبه المستخدم
+            لايحق للأدمن استخدام هذا التابع
+            هذا التابع يستخدم فقط من ال Api
+            لايستخدم من قبل الأدمن
+            </summary>
+            <param name="OrderCardId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IVerificationService.GetAll_Verification_OrdersForUser(System.Guid)">
+            <summary>
+            لجلب جميع طلبات التأكيد
+            يستخدم وسام هذا التابع
+            </summary>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IWithdrawCreditService.RequestMony(Card.Services.Dtos.RequestMonyDto,System.Guid)">
+            <summary>
+            لطلب رصيد
+            هذا التابع للمستخدم
+            يمكن استخدامه من الأدمن ان مرر رقم المستخدم
+            
+            </summary>
+            <param name="dto"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IWithdrawCreditService.DeleteRequest(System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            لحذف عملية سحب
+            لايمكن حذف عملية سحب حالتها تم الدفع
+            يمكن استخدام هذا التابع من الأدمن أو من المستخدم
+            </summary>
+            <param name="RequestId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IWithdrawCreditService.Change_RequestState(System.Int32,Card.Common.WithdrawStatus_Enum,System.String)">
+            <summary>
+            لتغيير حالة سحب 
+            هذا التابع يستخدمه فقط الأدمن
+            </summary>
+            <param name="RequestId">معرف عملية السحب</param>
+            <param name="newState">الحالة الجديدة</param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IWithdrawCreditService.GetAllRequests(System.Guid)">
+            <summary>
+            جلب سجل الطلبات لمستخدم محدد
+            للمستخدم + الأدمن
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IWithdrawCreditService.GetRequestbyId(System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            جلب تفاصيل طلب
+            للمستخدم + الأدمن
+            </summary>
+            <param name="RequestId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IWithdrawCreditService.GetNewRequests">
+            <summary>
+            جلب جميع الطلبات الجديدة التي حالتها غير مدفوعة
+            للأدمن فقط
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IWithdrawCreditService.GetRequstsByDate(System.DateTime,System.DateTime)">
+            <summary>
+            هذا التابع لتوليد ملف الاكسل الخاص بالتحويلات المطلوبة
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IWithdrawCreditService.UpdateUserCredit(System.Guid,System.Decimal)">
+            <summary>
+            هذا للأدمن فقط
+            لتعديل الكريدت الخاصة بمستخدم معين
+            </summary>
+            <param name="userId"></param>
+            <param name="new_CredirAmount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IOrderService.GetAllOrderForUser(System.Guid)">
+            <summary>
+            لجلب جميع الطلبات الخاصة بمستخدم معين
+            يستخدمه الادمن والمستخدم النهائي
+            </summary>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IOrderService.GetOrderDetailedforUser(System.Int32,System.Guid)">
+            <summary>
+            لجلب تفاصيل طلب الخاص بمستخدم معين
+            يستخدمه الادمن والمستخدم النهائي
+            </summary>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IOrderService.GetAllNewOrdersForAdmin">
+            <summary>
+            لجلب جميع الطلبات الجديدة
+            يستخدمه الادمن فقط
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IOrderService.GetOrderByCode(System.String)">
+            <summary>
+            للبحث عن طلب من خلال الكود
+            يستخدمه الادمن فقط
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IOrderService.GetOrderDetailedforAdmin(System.Int32)">
+            <summary>
+            لجلب تفاصيل طلب
+            يستخدمه الأدمن فقط
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IOrderService.GetClientArea(System.Guid)">
+            <summary>
+            لجلب 
+            Client area
+            يستخدمه الادمن والمستخدم النهائي
+            </summary>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IOrderService.GetAllNewCardsForAdmin(System.DateTime,System.DateTime)">
+            <summary>
+            هذا التابع للأدمن فقط
+            </summary>
+            <param name="firstDate">بدء المجال الزمني</param>
+            <param name="EndDate">نهاية المجال الزمني</param>
+            <param name="CardId">نوع البطاقة </param>
+            <param name="Amount">قيمة البطاقة</param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IOrderService.GetAllOrdersForAdmin_byDate(System.DateTime,System.DateTime)">
+            <summary>
+            جلب جميع الطلبات الواردة ضمن فترة زمنية محددة
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IOrderService.GetFinancialAccountsForAdmin(System.DateTime,System.DateTime)">
+            <summary>
+            هذا التابع للأدمن فقط
+            </summary>
+            <param name="firstDate">بدء المجال الزمني</param>
+            <param name="EndDate">نهاية المجال الزمني</param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IOrderService.AddNewOrder(Card.Services.Dtos.InputOrderDto,System.Guid)">
+            <summary>
+            هذا التابع لبيع بطاقات
+            يستخدم هذا التابع الزبون
+            لايستخدم من قبل الأدمن
+            </summary>
+            <param name="dto"></param>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IOrderService.Get_PriceOfCards(System.Collections.Generic.List{Card.Services.Dtos.InputOrderCardDto},System.Guid)">
+            <summary>
+            هذا التابع لحساب قيمة البطاقات
+            </summary>
+            <param name="dto"></param>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IOrderService.UpdateStateOfOrder(Card.Services.Dtos.InputOrderDto,System.Nullable{System.Guid})">
+            <summary>
+            هذا التابع فقط لتغيير حالة طلب
+            يستخدم هذا التابع فقط الأدمن
+            
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IOrderService.UpdateStateofCardInOrder(Card.Services.Dtos.InputOrderCardDto)">
+            <summary>
+            هذا التابع لتحديث حالةبطاقة ضمن طلب 
+            يستخدم هذا التابع الأدمن
+            ملاحظة: لا يحق للأدمن تغيير حالة احدى البطاقات إن كانت حالة الطلب تم الدفع
+            </summary>
+            <param name="OrderCardId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IOrderService.DeleteCardFormOrder(System.Int32)">
+            <summary>
+            هذا التابع لحذف احدى البطاقات من طلب 
+            يستخدم هذا التابع الأدمن
+            ملاحظة: لا يحق للأدمن حذف احدى البطاقات أو تعديلها إن كانت حالة الطلب تم الدفع
+            </summary>
+            <param name="OrderCardId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IOrderService.DeleteOrder(System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            هذا التابع لحذف طلب بيع بطاقات
+            يستخدم هذا التابع الأدمن والمستخدم النهائي
+            لايستطيع أي شخص حذف طلب وهو بحالة تم الدفع
+            Delete Order
+            </summary>
+            <param name="OrderId"></param>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IOrderService.AddNotesToOrder(Card.Services.Dtos.InputOrderDto)">
+            <summary>
+            هذا التابع لإضافة ملاحظات إلى الطلب
+            يحق فقط للأدمن إضافة ملاحظات إلى الطلب
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IOrderService.IsCardRepeated(System.Collections.Generic.List{Card.Services.Dtos.InputOrderCardDto})">
+            <summary>
+            لضمان عدم تكرار أي كود
+            </summary>
+            <param name="orderCardsDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IUserService.BlockUserd(System.Guid)">
+            <summary>
+            هذا التابع للأدمن لحظر مستخدم
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IUserService.UnBlockUserd(System.Guid)">
+            <summary>
+            هذا التابع للأدمن لالغاء حظر مستخدم
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IUserService.ChangeUserToVIP(System.Guid)">
+            <summary>
+            هذا التابع للأدمن لتغيير حالة مستخدم إلى VIP
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IUserService.ChangeUserToSimpleUser(System.Guid)">
+            <summary>
+            هذا التابع للأدمن لتغيير حالة مستخدم إلى مستخدم عادي
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Interfaces.IUserService.Refresh_FirebaseToken(System.Guid,System.String)">
+            <summary>
+            this function for android app
+            call this func when firebase token refresh
+            </summary>
+            <param name="userId"></param>
+            <param name="token"></param>
+        </member>
+        <member name="T:Card.Services.Services.Email_LogService">
+            <summary>
+            التوابع التي يستخدمها وسام ضمن هذه الصفحة سيتم كتابة كلمة
+            وسام
+            فوقها
+            
+            </summary>
+        </member>
+        <member name="T:Card.Services.Services.CardsService">
+            <summary>
+            التوابع التي يستخدمها وسام ضمن هذه الصفحة سيتم كتابة كلمة
+            وسام
+            فوقها
+            
+            </summary>
+        </member>
+        <member name="M:Card.Services.Services.CardsService.CardPriceUpdate(Card.Services.Dtos.CardDto)">
+            <summary>
+            وسام
+            يستخدم هذا التابع لتعديل أسعار البطاقات
+            الأسعار فقط وليس اسم البطاقة
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.CardsService.GetById(System.Int32)">
+            <summary>
+            وسام
+            جلب تفاصيل بطاقة معينة حسب 
+            Id
+            </summary>
+            <param name="cardId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.CardsService.GetAll">
+            <summary>
+            وسام
+            جلب كامل البطاقات مع تفاصيلها
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.CardsService.Add(Card.Services.Dtos.CardDto)">
+            <summary>
+            Add new Card
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.CardsService.Delete(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.ComplaintService.Add(Card.Services.Dtos.ComplaintDto)">
+            <summary>
+            For Admin
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.ComplaintService.Delete(System.Int32)">
+            <summary>
+            For admin
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.ComplaintService.GetAllComplaints">
+            <summary>
+            Get All Complaints, 
+            For admin
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.ComplaintService.GetComplaintById(System.Int32)">
+            <summary>
+            Get Complaint by id, 
+            For admin
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.AppVersionsService.Add(Card.Services.Dtos.AppVersionsDto)">
+            <summary>
+            For Admin
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.AppVersionsService.Delete(System.Int32)">
+            <summary>
+            For admin
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.AppVersionsService.GetAllVersions">
+            <summary>
+            Get All Versions, 
+            For admin
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.AppVersionsService.GetVersionById(System.Int32)">
+            <summary>
+            Get Version by id, 
+            For admin
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.AppVersionsService.GetLastVersion(System.Int32)">
+            <summary>
+            Get last Version, 
+            For user
+            </summary>
+            <param name="ApplicationType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Card.Services.Services.CategoryService">
+            <summary>
+             /// <summary>
+            يجب ألا يستخدم وسام توابع الاضافة والتعديل والحذف
+            فقط يمكنه استخدام تابع تعديل رقم الموبايل
+            أيضا يستخدم وسام توابع عرض الفئات من هذه الصفحة ولاداعي للسماح بإضافة أكثر من مستوى والاكتفاء بمستوى وحيد
+            </summary>
+            </summary>
+        </member>
+        <member name="M:Card.Services.Services.CategoryService.Update_WhatsApp(Card.Services.Dtos.InputCategoryDto)">
+             <summary>
+             انتبه/////////////////////////////////////////
+             هذا التابع فقط يستخدمه وسام من توابع التعديل
+            يستخدم هذا التابع لتعديل رقم الموبايل للشخص المسؤول عن هذه الخدمة أو هذه الفئة/
+             أيضا يستخدم وسام توابع عرض الفئات من هذه الصفحة ولاداعي للسماح بإضافة أكثر من مستوى والاكتفاء بمستوى وحيد
+             </summary>
+             <param name="dto"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.CategoryService.Add(Card.Services.Dtos.InputCategoryDto)">
+            <summary>
+            Add new category
+            </summary>
+            <param name="dto"></param>
+            <param name="ManagerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.CategoryService.Delete(System.Int32)">
+            <summary>
+            This for admin
+            note : if category has products this function return null
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.CategoryService.GetById_formanager_Edit(Card.Services.Dtos.CategoryGetDto)">
+            <summary>
+            Get Category By Id for manager Edit
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.CategoryService.GetBaseCategories_forManager(Card.Common.LanguageHelper,Card.Services.Dtos.CategoryGetDto)">
+            <summary>
+            Get Base Categories for Manager
+            </summary>
+            <param name="language"></param>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.CategoryService.GetAll_forManager(Card.Common.LanguageHelper,Card.Services.Dtos.CategoryGetDto)">
+            <summary>
+            This for get all tree for Restaurant manager
+            </summary>
+            <param name="language"></param>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.CategoryService.GetById(Card.Common.LanguageHelper,Card.Services.Dtos.CategoryGetDto)">
+            <summary>
+            
+            </summary>
+            <param name="Language"></param>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.CategoryService.GetBaseCategories(Card.Common.LanguageHelper,Card.Services.Dtos.CategoryGetDto)">
+            <summary>
+            Get Base Categories for user
+            </summary>
+            <param name="language"></param>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.CategoryService.GetAll(Card.Common.LanguageHelper,Card.Services.Dtos.CategoryGetDto)">
+            <summary>
+            This for get all tree for user
+            </summary>
+            <param name="language"></param>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.CategoryService.DeleteImage(System.Int32)">
+            <summary>
+            Delete Image
+            </summary>
+            <param name="CategoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.VerificationService.GetPhoneNumber(Card.Services.Dtos.VerificationDto,System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="dto"></param>
+            <param name="UserId"></param>
+            <returns>
+            return 0 when user hasn't enough money in his account
+            </returns>
+        </member>
+        <member name="M:Card.Services.Services.VerificationService.DeletePhoneNumber(System.Int32)">
+            <summary>
+            هذا التابع لحذف رقم طلبه المستخدم
+            لايحق للأدمن استخدام هذا التابع
+            هذا التابع يستخدم فقط من ال Api
+            لايستخدم من قبل الأدمن
+            </summary>
+            <param name="Id_Our"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.VerificationService.GetAll_Verification_OrdersForUser(System.Guid)">
+            <summary>
+            لجلب جميع طلبات التأكيد
+            يستخدم وسام هذا التابع
+            </summary>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.WithdrawCreditService.RequestMony(Card.Services.Dtos.RequestMonyDto,System.Guid)">
+            <summary>
+            لطلب رصيد
+            هذا التابع للمستخدم
+            يمكن استخدامه من الأدمن ان مرر رقم المستخدم
+            
+            </summary>
+            <param name="dto"></param>
+            <param name="userId"></param>
+            <returns>0 ---> كمية النقود التي طلبها أكبر من رصيده</returns>
+        </member>
+        <member name="M:Card.Services.Services.WithdrawCreditService.DeleteRequest(System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            لحذف عملية سحب
+            لايمكن حذف عملية سحب حالتها تم الدفع
+            يمكن استخدام هذا التابع من الأدمن أو من المستخدم
+            </summary>
+            <param name="RequestId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.WithdrawCreditService.Change_RequestState(System.Int32,Card.Common.WithdrawStatus_Enum,System.String)">
+            <summary>
+            لتغيير حالة سحب 
+            هذا التابع يستخدمه فقط الأدمن
+            </summary>
+            <param name="RequestId">معرف عملية السحب</param>
+            <param name="newState">الحالة الجديدة</param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.WithdrawCreditService.GetAllRequests(System.Guid)">
+            <summary>
+            جلب سجل الطلبات لمستخدم محدد
+            للمستخدم + الأدمن
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.WithdrawCreditService.GetRequestbyId(System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            جلب تفاصيل طلب
+            للمستخدم + الأدمن
+            </summary>
+            <param name="RequestId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.WithdrawCreditService.GetNewRequests">
+            <summary>
+            جلب جميع الطلبات الجديدة التي حالتها غير مدفوعة
+            للأدمن فقط
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.WithdrawCreditService.GetRequstsByDate(System.DateTime,System.DateTime)">
+            <summary>
+            هذا التابع لتوليد ملف الاكسل الخاص بالتحويلات المطلوبة
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.WithdrawCreditService.UpdateUserCredit(System.Guid,System.Decimal)">
+            <summary>
+            هذا للأدمن فقط
+            لتعديل الكريدت الخاصة بمستخدم معين
+            </summary>
+            <param name="userId"></param>
+            <param name="new_CredirAmount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.OrderService.AddNewOrder(Card.Services.Dtos.InputOrderDto,System.Guid)">
+            <summary>
+            هذا التابع لبيع بطاقات
+            يستخدم هذا التابع الزبون
+            لايستخدم من قبل الأدمن
+            </summary>
+            <param name="dto"></param>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.OrderService.UpdateStateOfOrder(Card.Services.Dtos.InputOrderDto,System.Nullable{System.Guid})">
+            <summary>
+            هذا التابع فقط لتغيير حالة طلب
+            يستخدم هذا التابع فقط الأدمن
+            
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.OrderService.DeleteCardFormOrder(System.Int32)">
+            <summary>
+            هذا التابع لحذف احدى البطاقات من طلب 
+            يستخدم هذا التابع الأدمن
+            ملاحظة: لا يحق للأدمن حذف احدى البطاقات أو تعديلها إن كانت حالة الطلب تم الدفع
+            </summary>
+            <param name="OrderCardId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.OrderService.UpdateStateofCardInOrder(Card.Services.Dtos.InputOrderCardDto)">
+            <summary>
+            هذا التابع لتحديث حالةبطاقة ضمن طلب 
+            يستخدم هذا التابع الأدمن
+            ملاحظة: لا يحق للأدمن تغيير حالة احدى البطاقات إن كانت حالة الطلب تم الدفع
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.OrderService.DeleteOrder(System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            هذا التابع لحذف طلب بيع بطاقات
+            يستخدم هذا التابع الأدمن والمستخدم النهائي
+            لايستطيع أي شخص حذف طلب وهو بحالة تم الدفع
+            Delete Order
+            </summary>
+            <param name="OrderId"></param>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.OrderService.AddNotesToOrder(Card.Services.Dtos.InputOrderDto)">
+            <summary>
+            هذا التابع لإضافة ملاحظات إلى الطلب
+            يحق فقط للأدمن إضافة ملاحظات إلى الطلب
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.OrderService.GetAllOrderForUser(System.Guid)">
+            <summary>
+            لجلب جميع الطلبات الخاصة بمستخدم معين
+            يستخدمه الادمن والمستخدم النهائي
+            </summary>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.OrderService.GetOrderDetailedforUser(System.Int32,System.Guid)">
+            <summary>
+            لجلب تفاصيل طلب الخاص بمستخدم معين
+            يستخدمه الادمن والمستخدم النهائي
+            </summary>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.OrderService.GetAllNewOrdersForAdmin">
+            <summary>
+            لجلب جميع الطلبات الجديدة
+            يستخدمه الادمن فقط
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.OrderService.GetOrderByCode(System.String)">
+            <summary>
+            للبحث عن طلب من خلال الكود
+            يستخدمه الادمن فقط
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.OrderService.GetOrderDetailedforAdmin(System.Int32)">
+            <summary>
+            لجلب تفاصيل طلب
+            يستخدمه الأدمن فقط
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.OrderService.GetAllOrdersForAdmin_byDate(System.DateTime,System.DateTime)">
+            <summary>
+            جلب جميع الطلبات الواردة ضمن فترة زمنية محددة
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.OrderService.GetAllNewCardsForAdmin(System.DateTime,System.DateTime)">
+            <summary>
+            هذا التابع للأدمن فقط
+            </summary>
+            <param name="firstDate">بدء المجال الزمني</param>
+            <param name="EndDate">نهاية المجال الزمني</param>
+            <param name="CardId">نوع البطاقة </param>
+            <param name="Amount">قيمة البطاقة</param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.OrderService.GetClientArea(System.Guid)">
+            <summary>
+            لجلب 
+            Client area
+            يستخدمه الادمن والمستخدم النهائي
+            </summary>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.OrderService.Get_PriceOfCards(System.Collections.Generic.List{Card.Services.Dtos.InputOrderCardDto},System.Guid)">
+            <summary>
+            هذا التابع لحساب قيمة البطاقات
+            </summary>
+            <param name="dto"></param>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.OrderService.GetFinancialAccountsForAdmin(System.DateTime,System.DateTime)">
+            <summary>
+            هذا التابع للأدمن فقط
+            </summary>
+            <param name="firstDate">بدء المجال الزمني</param>
+            <param name="EndDate">نهاية المجال الزمني</param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.OrderService.IsCardRepeated(System.Collections.Generic.List{Card.Services.Dtos.InputOrderCardDto})">
+            <summary>
+            لضمان عدم تكرار أي كود
+            </summary>
+            <param name="orderCardsDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.UserService.BlockUserd(System.Guid)">
+            <summary>
+            هذا التابع للأدمن لحظر مستخدم
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.UserService.UnBlockUserd(System.Guid)">
+            <summary>
+            هذا التابع للأدمن لالغاء حظر مستخدم
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.UserService.ChangeUserToVIP(System.Guid)">
+            <summary>
+            هذا التابع للأدمن لتغيير حالة مستخدم إلى VIP
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.UserService.ChangeUserToSimpleUser(System.Guid)">
+            <summary>
+            هذا التابع للأدمن لتغيير حالة مستخدم إلى مستخدم عادي
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Card.Services.Services.UserService.Refresh_FirebaseToken(System.Guid,System.String)">
+            <summary>
+            this function for android app
+            call this func when firebase token refresh
+            </summary>
+            <param name="userId"></param>
+            <param name="token"></param>
+        </member>
+    </members>
+</doc>

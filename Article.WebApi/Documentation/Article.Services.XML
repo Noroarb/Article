@@ -1,0 +1,613 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Article.Services</name>
+    </assembly>
+    <members>
+        <member name="P:Article.Services.Dtos.ArticleDto.Id">
+            <summary>
+            Идентификатор статьи
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.ArticleDto.CategoryId">
+            <summary>
+            категория статьи
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.ArticleDto.Title">
+             <summary>
+            Название статьи
+             </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.ArticleDto.AdditionDate">
+            <summary>
+            Дата добавления
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.ArticleDto.State">
+            <summary>
+            состояние
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.ArticleDto.RejectedReason">
+            <summary>
+            Причина отклонения статьи
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.ArticleDto.Users">
+            <summary>
+            Авторы статей
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.ArticleDto.CountOfReading">
+            <summary>
+            Количество прочтений статьи
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.ArticleDto.Ratings">
+            <summary>
+            Рейтинг статей
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.ArticleDto.Comments">
+            <summary>
+            Комментарии к статье
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.ArticleDto.KeyWords">
+            <summary>
+            Ключевые слова
+            </summary>
+        </member>
+        <member name="T:Article.Services.Dtos.KeyWordsDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Article.Services.Dtos.CommentsDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.CommentsDto.Id">
+            <summary>
+            Идентификатор комментария
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.CommentsDto.ArticleId">
+            <summary>
+            ID статьи
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.CommentsDto.UserId">
+            <summary>
+            ID пользователя
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.CommentsDto.UserName">
+            <summary>
+            Имя пользователя, добавившего комментарий
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.CommentsDto.Body">
+            <summary>
+            комментарий
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.CommentsDto.AdditionDate">
+            <summary>
+            Дата комментария
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.InputCommentDto.ArticleId">
+            <summary>
+            Article Id
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.InputCommentDto.Body">
+            <summary>
+            Комментарии
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.SearchInArticle.CategoryId">
+            <summary>
+            Вернуть статью по id
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.SearchInArticle.Title">
+            <summary>
+            Показать статью по названию статьи
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.SearchInArticle.SortByRatings">
+            <summary>
+            Показать статью по рейтингу
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.SearchInArticle.SortByReading">
+            <summary>
+            Показать статьи по количеству прочтений
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.SearchInArticle.SortByDate">
+            <summary>
+            Показать статью по дате публикации
+            </summary>
+        </member>
+        <member name="T:Article.Services.Dtos.UsersArticlesDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.UsersArticlesDto.ArticleId">
+            <summary>
+            For add article this filed is not important
+            </summary>
+        </member>
+        <member name="T:Article.Services.Dtos.EditCategoryDto">
+            <summary>
+            Category for admin
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.EditCategoryDto.Id">
+            <summary>
+            Id required for edit not for insert
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.EditCategoryDto.ParentID">
+            <summary>
+            The Id for the parent of this category 
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.EditCategoryDto.Sort">
+            <summary>
+            Category sort 
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.EditCategoryDto.WhatsAppNumber">
+            <summary>
+            رقم الواتس للشخص المسؤول عن هذه الخدمة
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.EditCategoryDto.ArabicName">
+            <summary>
+            Category name in arabic
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.EditCategoryDto.EnglishName">
+            <summary>
+            Category name in english
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.EditCategoryDto.ImagePath">
+            <summary>
+            Image category path , 
+            This is for show when edit
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.EditCategoryDto.CategoryChildren">
+            <summary>
+            This for Get not for input,  
+            list of this category's children
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.EditCategoryDto.HasChildren">
+            <summary>
+            This for Get not for input,  
+            Show that this category has children or not
+            </summary>
+        </member>
+        <member name="T:Article.Services.Dtos.CategoryDto">
+            <summary>
+            Category
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.CategoryDto.Id">
+            <summary>
+            Category Id 
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.CategoryDto.Name">
+            <summary>
+            Category name
+            </summary>
+        </member>
+        <member name="T:Article.Services.Dtos.CategoryGetDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.CategoryGetDto.Id">
+            <summary>
+            Category/Guide Id, you can put it null if you want to get base category
+            </summary>
+        </member>
+        <member name="T:Article.Services.Dtos.InputCategoryDto">
+            <summary>
+            Input category
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.InputCategoryDto.Id">
+            <summary>
+            Идентификатор требуется для редактирования, а не для вставки
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.InputCategoryDto.Name">
+            <summary>
+            Вот название категории
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.InputArticleDto.Id">
+            <summary>
+            ID статьи
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.InputArticleDto.CategoryId">
+            <summary>
+            Категория статьи
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.InputArticleDto.Title">
+            <summary>
+            Название статьи
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.InputArticleDto.File">
+            <summary>
+            Файл статьи имеет кодировку base 64.  
+            </summary>
+        </member>
+        <member name="P:Article.Services.Dtos.InputArticleDto.Users">
+            <summary>
+            Авторы статей
+            </summary>
+        </member>
+        <member name="P:Article.Services.Identity.IdentityUser.IsActivated">
+            <summary>
+            يجب أن نمنع مستخدم من الطلب من خلال
+            هذا الحقل ويعبر عن حالة هذا المستخدم إن
+            كان مسموح له بإرسال الشكاوي والطلبات أم لا
+            </summary>
+        </member>
+        <member name="P:Article.Services.Identity.IdentityUser.ProfileImage">
+            <summary>
+            رابط الصورة الشخصية على الفيس بوك يمرر مع تسجيل الدخول
+            </summary>
+        </member>
+        <member name="M:Article.Services.Interfaces.IArticleService.AddArticleAsDraft(Article.Services.Dtos.InputArticleDto,System.String)">
+            <summary>
+            Add new article as a draft
+            </summary>
+            <param name="dto"></param>
+            <param name="ArticlePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.IArticleService.AddKeyWordsToArticle(System.Int32,System.Collections.Generic.List{System.String},System.Nullable{System.Guid})">
+            <summary>
+            This function for writer and for admin
+            Add kwywords to article
+            </summary>
+            <param name="ArticleId"></param>
+            <param name="keywords"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.IArticleService.ChangeStateOfArticleToPending(System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            Change state of article from draft to pending
+            only writer can use this function and admin
+            </summary>
+            <param name="ArticleId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.IArticleService.ChangeStateOfArticleToAccepted(System.Int32)">
+            <summary>
+            only Supervisor and admin can use this function 
+            Change state of article from pending to accepted
+            
+            </summary>
+            <param name="ArticleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.IArticleService.ChangeStateOfArticleToRejected(System.Int32,System.String)">
+            <summary>
+            only Supervisor and admin can use this function 
+            Change state of article to rejected
+            
+            </summary>
+            <param name="ArticleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.IArticleService.ChangeStateOfArticleToDraft(System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            Change state of article to draft
+            only writer can use this function and admin
+            </summary>
+            <param name="ArticleId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.IArticleService.Delete(System.Int32)">
+            <summary>
+            For delete an article by id
+            </summary>
+            <param name="Id">Article Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.IArticleService.GetAllPendingArticles">
+            <summary>
+            For admin and supervisor
+            Get All  Articles in waiting state
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.IArticleService.GetAllRejectedArticles">
+            <summary>
+            For admin and supervisor
+            Get All  Articles in rejected state
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.IArticleService.GetAllArticles_ForUser(System.Guid)">
+            <summary>
+            For admin and supervisor
+            Get All  Articles for specific user
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.IArticleService.ReadArticle(System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            Read article
+            For admin
+            </summary>
+            <returns>Article as URL</returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.ICategoryService.Add(Article.Services.Dtos.InputCategoryDto)">
+            <summary>
+            Add new category
+            </summary>
+            <param name="dto"></param>
+            <param name="ManagerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.ICategoryService.Delete(System.Int32)">
+            <summary>
+            note : if category has products this function return null
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.ICategoryService.GetAll(Article.Services.Dtos.CategoryGetDto)">
+            <summary>
+            This for get all tree for user
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.ICommentService.AddNewComment(Article.Services.Dtos.InputCommentDto,System.Guid)">
+            <summary>
+            Add new comment
+            This function for user 
+            </summary>
+            <param name="dto"></param>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.ICommentService.DeleteComment(System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            Delete comment
+            this function for admin and User
+            </summary>
+            <param name="CommentId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.IUserService.BlockUserd(System.Guid)">
+            <summary>
+            هذا التابع للأدمن لحظر مستخدم
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.IUserService.UnBlockUserd(System.Guid)">
+            <summary>
+            هذا التابع للأدمن لالغاء حظر مستخدم
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.IUserService.ChangeUserToWriter(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Interfaces.IUserService.ChangeUserToSupervisorRole(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.ArticleService.AddArticleAsDraft(Article.Services.Dtos.InputArticleDto,System.String)">
+            <summary>
+            Add new article as a draft
+            </summary>
+            <param name="dto"></param>
+            <param name="ArticlePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.ArticleService.AddKeyWordsToArticle(System.Int32,System.Collections.Generic.List{System.String},System.Nullable{System.Guid})">
+            <summary>
+            This function for writer and for admin
+            Add kwywords to article
+            </summary>
+            <param name="ArticleId"></param>
+            <param name="keywords"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.ArticleService.ChangeStateOfArticleToPending(System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            Change state of article from draft to pending
+            only writer can use this function and admin
+            </summary>
+            <param name="ArticleId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.ArticleService.ChangeStateOfArticleToAccepted(System.Int32)">
+            <summary>
+            only Supervisor and admin can use this function 
+            Change state of article from pending to accepted
+            
+            </summary>
+            <param name="ArticleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.ArticleService.ChangeStateOfArticleToRejected(System.Int32,System.String)">
+            <summary>
+            only Supervisor and admin can use this function 
+            Change state of article to rejected
+            
+            </summary>
+            <param name="ArticleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.ArticleService.ChangeStateOfArticleToDraft(System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            Change state of article to draft
+            only writer can use this function and admin
+            </summary>
+            <param name="ArticleId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.ArticleService.Delete(System.Int32)">
+            <summary>
+            For delete an article by id
+            </summary>
+            <param name="Id">Article Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.ArticleService.GetAllPendingArticles">
+            <summary>
+            For admin and supervisor
+            Get All  Articles in waiting state
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.ArticleService.GetAllRejectedArticles">
+            <summary>
+            For admin and supervisor
+            Get All  Articles in rejected state
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.ArticleService.GetAllArticles_ForUser(System.Guid)">
+            <summary>
+            For admin and supervisor
+            Get All  Articles for specific user
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.ArticleService.ReadArticle(System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            Read article
+            For admin
+            </summary>
+            <returns>Article as URL</returns>
+        </member>
+        <member name="T:Article.Services.Services.CategoryService">
+            <summary>
+             /// <summary>
+             تصنيف المقالات
+            </summary>
+            </summary>
+        </member>
+        <member name="M:Article.Services.Services.CategoryService.Add(Article.Services.Dtos.InputCategoryDto)">
+            <summary>
+            Add new category
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.CategoryService.Delete(System.Int32)">
+            <summary>
+            This for admin
+            note : if category has articles this function return null
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.CategoryService.GetById(Article.Services.Dtos.CategoryGetDto)">
+            <summary>
+            
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.CategoryService.GetAll(Article.Services.Dtos.CategoryGetDto)">
+            <summary>
+            This for get all tree for user
+            </summary>
+            <param name="language"></param>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.CommentService.AddNewComment(Article.Services.Dtos.InputCommentDto,System.Guid)">
+            <summary>
+            Add new comment
+            This function for user 
+            </summary>
+            <param name="dto"></param>
+            <param name="UserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.CommentService.DeleteComment(System.Int32,System.Nullable{System.Guid})">
+            <summary>
+            Delete comment
+            this function for admin and User
+            </summary>
+            <param name="CommentId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.UserService.BlockUserd(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.UserService.UnBlockUserd(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.UserService.ChangeUserToWriter(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Article.Services.Services.UserService.ChangeUserToSupervisorRole(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
